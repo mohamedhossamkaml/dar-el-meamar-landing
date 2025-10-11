@@ -1,0 +1,18 @@
+// tsconfig.json
+{
+  "extends": "./.config/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*"]
+}
+
+// tsconfig.base.json
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+// }
