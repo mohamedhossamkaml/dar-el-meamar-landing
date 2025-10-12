@@ -123,7 +123,7 @@ const Navbar = ({ scrollToSection }: Props) => {
               >
                 Contact Us
               </motion.button>
-              <ThemeToggle />
+
             </div>
           </motion.div>
         )}
