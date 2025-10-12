@@ -15,7 +15,6 @@ const Works = () => {
   const stats = t("works.stats", { returnObjects: true }) as {
     value: string;
     label: string;
-    suffix: string;
   }[];
 
   return (
@@ -70,7 +69,7 @@ const Works = () => {
                   duration={1}
                   className="text-5xl font-bold text-white dark:text-teal-400"
                 />
-                <span className="text-5xl font-bold">{stat.suffix}</span>
+                <span className="text-3xl">{stat.suffix}</span>
               </motion.p>
               <motion.p
                 variants={fadeIn}

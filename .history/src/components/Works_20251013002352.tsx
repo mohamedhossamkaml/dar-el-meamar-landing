@@ -15,7 +15,6 @@ const Works = () => {
   const stats = t("works.stats", { returnObjects: true }) as {
     value: string;
     label: string;
-    suffix: string;
   }[];
 
   return (
@@ -58,19 +57,19 @@ const Works = () => {
               transition={{ delay: idx * 0.2 }}
               className="space-y-2"
             >
+              <CountUp
+                from={0}
+                to={`${stat.value}`}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text"
+              />
               <motion.p
                 variants={scaleIn}
                 className="text-5xl font-bold text-white dark:text-teal-400"
               >
-                <CountUp
-                  from={0}
-                  to={parseInt(stat.value.replace(/,/g, ''))}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="text-5xl font-bold text-white dark:text-teal-400"
-                />
-                <span className="text-5xl font-bold">{stat.suffix}</span>
+                {stat.value}
               </motion.p>
               <motion.p
                 variants={fadeIn}

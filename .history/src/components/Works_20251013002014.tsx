@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import CountUp from './Tools/motion/CountUp'
+import CountUp from '../Tools/motion/CountUp'
 import {
   fadeInUp,
   fadeIn,
@@ -15,7 +15,6 @@ const Works = () => {
   const stats = t("works.stats", { returnObjects: true }) as {
     value: string;
     label: string;
-    suffix: string;
   }[];
 
   return (
@@ -23,7 +22,7 @@ const Works = () => {
       key={i18n.language}
       id="works"
       className="py-20 bg-gradient-to-br from-teal-600 to-teal-800 text-white
-                  dark:from-slate-900 dark:to-slate-950 dark:text-gray-100 transition-colors duration-300"
+                   dark:from-slate-900 dark:to-slate-950 dark:text-gray-100 transition-colors duration-300"
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
@@ -62,15 +61,7 @@ const Works = () => {
                 variants={scaleIn}
                 className="text-5xl font-bold text-white dark:text-teal-400"
               >
-                <CountUp
-                  from={0}
-                  to={parseInt(stat.value.replace(/,/g, ''))}
-                  separator=","
-                  direction="up"
-                  duration={1}
-                  className="text-5xl font-bold text-white dark:text-teal-400"
-                />
-                <span className="text-5xl font-bold">{stat.suffix}</span>
+                {stat.value}
               </motion.p>
               <motion.p
                 variants={fadeIn}
