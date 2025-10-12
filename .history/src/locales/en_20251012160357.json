@@ -1,0 +1,38 @@
+{
+  "_comment_navbar": "===== Navbar Translations =====",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "works": "Works",
+    "contact": "Contact Us"
+  },
+  "_comment_hero": "===== Hero Section =====",
+  "hero": {
+    "title": "Building Your <1>Dreams</1> Into Reality",
+    "subtitle": "Dar El-Meamar is your trusted partner in construction excellence. We transform visions into architectural masterpieces.",
+    "btnStart": "Start Your Project",
+    "btnWork": "View Our Work",
+    "badge": "Excellence in Construction"
+  },
+  "_comment_about": "===== About Section =====",
+  "about": {
+    "title": "About Dar El-Meamar",
+    "subtitle": "A legacy of construction excellence and architectural innovation",
+    "cards": [
+      {
+        "title": "Our Vision",
+        "description": "To be the leading construction company, setting new standards in quality, innovation, and customer satisfaction across the region."
+      },
+      {
+        "title": "Our Mission",
+        "description": "Delivering exceptional construction projects that exceed expectations through expertise, dedication, and attention to every detail."
+      },
+      {
+        "title": "Our Values",
+        "description": "Integrity, quality craftsmanship, innovation, and building lasting relationships with our clients and community."
+      }
+    ]
+  }
+}

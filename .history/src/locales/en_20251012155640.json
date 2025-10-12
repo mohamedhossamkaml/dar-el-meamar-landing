@@ -1,0 +1,19 @@
+{
+  "_comment_navbar": "===== Navbar Translations =====",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "works": "Works",
+    "contact": "Contact Us"
+  },
+  "_comment_hero": "===== Hero Section =====",
+  "hero": {
+    "title": "Building Your <1>Dreams</1> Into Reality",
+    "subtitle": "Dar El-Meamar is your trusted partner in construction excellence. We transform visions into architectural masterpieces.",
+    "btnStart": "Start Your Project",
+    "btnWork": "View Our Work",
+    "badge": "Excellence in Construction"
+  }
+}

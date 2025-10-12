@@ -1,0 +1,104 @@
+{
+  "_comment_navbar": "===== ترجمات شريط التنقل =====",
+  "navbar": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "services": "الخدمات",
+    "gallery": "المعرض",
+    "works": "أعمالنا",
+    "contact": "تواصل معنا"
+  },
+  "_comment_hero": "===== قسم الهيرو =====",
+  "hero": {
+    "title": "نحو <1>أحلامك</1> نصنع الواقع",
+    "subtitle": "دار المعمار شريكك الموثوق في التميز المعماري. نحول الرؤى إلى تحف معمارية.",
+    "btnStart": "ابدأ مشروعك",
+    "btnWork": "شاهد أعمالنا",
+    "badge": "التميز في البناء"
+  },
+  "_comment_about": "===== قسم من نحن =====",
+  "about": {
+    "title": "عن دار المعمار",
+    "subtitle": "إرث من التميز في البناء والابتكار المعماري",
+    "cards": [
+      {
+        "title": "رؤيتنا",
+        "description": "أن نكون الشركة الرائدة في مجال البناء، ونضع معايير جديدة للجودة والابتكار ورضا العملاء في المنطقة."
+      },
+      {
+        "title": "مهمتنا",
+        "description": "تقديم مشاريع إنشائية استثنائية تتجاوز التوقعات من خلال الخبرة والتفاني والاهتمام بكل التفاصيل."
+      },
+      {
+        "title": "قيمنا",
+        "description": "النزاهة، جودة الحرفية، الابتكار، وبناء علاقات دائمة مع عملائنا ومجتمعنا."
+      }
+    ]
+  },
+  "_comment_services": "===== Services Section =====",
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive construction solutions tailored to your needs",
+    "cards": [
+      {
+        "title": "Residential Construction",
+        "desc": "Building dream homes with precision and care"
+      },
+      {
+        "title": "Commercial Projects",
+        "desc": "Creating functional and impressive business spaces"
+      },
+      {
+        "title": "Renovations & Remodeling",
+        "desc": "Transforming existing spaces into modern masterpieces"
+      },
+      {
+        "title": "Project Management",
+        "desc": "End-to-end construction project oversight"
+      },
+      {
+        "title": "Architectural Design",
+        "desc": "Innovative designs that bring visions to life"
+      },
+      {
+        "title": "Consultation Services",
+        "desc": "Expert guidance for your construction journey"
+      }
+    ]
+  }
+}
+locales/ar.json
+json
+{
+  "_comment_services": "===== قسم الخدمات =====",
+  "services": {
+    "title": "خدماتنا",
+    "subtitle": "حلول إنشائية متكاملة مصممة خصيصًا لتلبية احتياجاتك",
+    "cards": [
+      {
+        "title": "البناء السكني",
+        "desc": "نبني منازل الأحلام بدقة وعناية"
+      },
+      {
+        "title": "المشاريع التجارية",
+        "desc": "ننشئ مساحات عمل عملية ومبهرة"
+      },
+      {
+        "title": "التجديد وإعادة التصميم",
+        "desc": "نحوّل المساحات القائمة إلى تحف عصرية"
+      },
+      {
+        "title": "إدارة المشاريع",
+        "desc": "إشراف كامل على مشاريع البناء من البداية للنهاية"
+      },
+      {
+        "title": "التصميم المعماري",
+        "desc": "تصاميم مبتكرة تحقق الرؤى على أرض الواقع"
+      },
+      {
+        "title": "خدمات الاستشارات",
+        "desc": "إرشاد خبراء لرحلتك في عالم البناء"
+      }
+    ]
+  }
+}

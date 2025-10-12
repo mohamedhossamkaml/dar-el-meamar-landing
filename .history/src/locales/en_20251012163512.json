@@ -1,0 +1,105 @@
+{
+  "_comment_navbar": "===== Navbar Translations =====",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "works": "Works",
+    "contact": "Contact Us"
+  },
+  "_comment_hero": "===== Hero Section =====",
+  "hero": {
+    "title": "Building Your <1>Dreams</1> Into Reality",
+    "subtitle": "Dar El-Meamar is your trusted partner in construction excellence. We transform visions into architectural masterpieces.",
+    "btnStart": "Start Your Project",
+    "btnWork": "View Our Work",
+    "badge": "Excellence in Construction"
+  },
+  "_comment_about": "===== About Section =====",
+  "about": {
+    "title": "About Dar El-Meamar",
+    "subtitle": "A legacy of construction excellence and architectural innovation",
+    "cards": [
+      {
+        "title": "Our Vision",
+        "description": "To be the leading construction company, setting new standards in quality, innovation, and customer satisfaction across the region."
+      },
+      {
+        "title": "Our Mission",
+        "description": "Delivering exceptional construction projects that exceed expectations through expertise, dedication, and attention to every detail."
+      },
+      {
+        "title": "Our Values",
+        "description": "Integrity, quality craftsmanship, innovation, and building lasting relationships with our clients and community."
+      }
+    ]
+  },
+  "_comment_services": "===== Services Section =====",
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive construction solutions tailored to your needs",
+    "cards": [
+      {
+        "title": "Residential Construction",
+        "desc": "Building dream homes with precision and care"
+      },
+      {
+        "title": "Commercial Projects",
+        "desc": "Creating functional and impressive business spaces"
+      },
+      {
+        "title": "Renovations & Remodeling",
+        "desc": "Transforming existing spaces into modern masterpieces"
+      },
+      {
+        "title": "Project Management",
+        "desc": "End-to-end construction project oversight"
+      },
+      {
+        "title": "Architectural Design",
+        "desc": "Innovative designs that bring visions to life"
+      },
+      {
+        "title": "Consultation Services",
+        "desc": "Expert guidance for your construction journey"
+      }
+    ]
+  },
+  "_comment_gallery": "===== Gallery Section =====",
+  "gallery": {
+    "title": "Project Gallery",
+    "subtitle": "A showcase of our finest construction achievements",
+    "projects": [
+      "Project 1",
+      "Project 2",
+      "Project 3",
+      "Project 4",
+      "Project 5",
+      "Project 6"
+    ]
+  },
+  "_comment_works": "===== Works Section =====",
+  "works": {
+    "title": "Our Works",
+    "subtitle": "Delivering excellence across diverse construction projects",
+    "stats": [
+      {
+        "value": "250+",
+        "label": "Completed Projects"
+      },
+      {
+        "value": "15+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "500+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "100%",
+        "label": "Satisfaction Rate"
+      }
+    ]
+  }
+}
