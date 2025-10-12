@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import darImg from '../assets/darImg.png';
 import {
   fadeInUp,
   fadeIn,
@@ -9,6 +8,7 @@ import {
 
 const Footer = () => {
 
+  const darImg = '/public/darImg.png';
   return (
     <motion.footer
       className="bg-gray-900 dark:bg-gray-800 text-white py-12"
@@ -28,7 +28,6 @@ const Footer = () => {
             className="h-16 w-auto mx-auto"
             variants={scaleIn}
           />
-
           <motion.p
             className="text-gray-400"
             variants={fadeIn}

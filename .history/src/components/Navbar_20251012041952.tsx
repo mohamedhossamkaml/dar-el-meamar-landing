@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'react-feather';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './Tools/ThemeToggle ';
-import darImg from '../assets/darImg.png';
 import {
   fadeInUp,
   fadeInRight,
@@ -41,7 +40,7 @@ const Navbar = ({ scrollToSection }: Props) => {
         <div className="flex justify-between items-center h-32">
           {/* Logo */}
           <motion.img
-            src={darImg}
+            src="/darImg.png"
             alt="Dar El-Meamar"
             className="h-28 w-auto"
             variants={scaleIn}

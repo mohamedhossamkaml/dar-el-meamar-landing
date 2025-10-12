@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'react-feather';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './Tools/ThemeToggle ';
-import darImg from '../assets/darImg.png';
 import {
   fadeInUp,
   fadeInRight,
@@ -17,6 +16,7 @@ interface Props {
 const Navbar = ({ scrollToSection }: Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const darImg = '/darImg.png';
 
   useEffect(() => {
     const handleScroll = () => {

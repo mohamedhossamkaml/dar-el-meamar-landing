@@ -17,6 +17,7 @@ interface Props {
 const Navbar = ({ scrollToSection }: Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const darImg = '/darImg.png';
 
   useEffect(() => {
     const handleScroll = () => {

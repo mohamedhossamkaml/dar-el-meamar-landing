@@ -28,7 +28,6 @@ const Footer = () => {
             className="h-16 w-auto mx-auto"
             variants={scaleIn}
           />
-
           <motion.p
             className="text-gray-400"
             variants={fadeIn}

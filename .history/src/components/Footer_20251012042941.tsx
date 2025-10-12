@@ -28,6 +28,7 @@ const Footer = () => {
             className="h-16 w-auto mx-auto"
             variants={scaleIn}
           />
+          <motion.img src={darImg} alt="Dar El-Meamar"  />
 
           <motion.p
             className="text-gray-400"

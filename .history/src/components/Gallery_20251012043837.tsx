@@ -60,7 +60,7 @@ const Gallery = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="aspect-square bg-gradient-to-br from-teal-100 to-teal-200
                          dark:from-gray-800 dark:to-gray-700
-                         rounded-xl shadow-lg hover:shadow-2xl dark:hover:shadow-teal-600 cursor-pointer transition-all hover:-translate-y-1
+                         rounded-xl shadow-lg hover:shadow-2xl dark:hover:shadow-green-500 cursor-pointer transition-all hover:-translate-y-1
                          flex items-center justify-center overflow-hidden group"
             >
               <motion.div
