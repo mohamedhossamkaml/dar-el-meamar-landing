@@ -48,8 +48,6 @@ const Hero = ({ scrollToSection, withVanta }: Props) => {
             <div className="space-y-4">
               <motion.h1
                 variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
                 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white"
               >
                 <Trans i18nKey="hero.title">

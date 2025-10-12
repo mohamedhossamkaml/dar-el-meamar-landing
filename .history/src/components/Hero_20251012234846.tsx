@@ -12,7 +12,6 @@ import {
   fadeInRight,
   hoverGlow,
 } from '../utils/animations';
-import { useTranslation, Trans } from "react-i18next";
 
 interface Props {
   scrollToSection: (id: string) => void;
@@ -20,20 +19,22 @@ interface Props {
 }
 
 const Hero = ({ scrollToSection, withVanta }: Props) => {
-  const { t, i18n } = useTranslation();
 
   return (
     <motion.section
       id="home"
-      dir={i18n.language === "ar" ? "rtl" : "ltr"}
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="relative pt-20 min-h-screen flex items-center overflow-hidden"
+      className="relative pt-20  min-h-screen flex items-center overflow-hidden"
     >
       {/* Vanta Background */}
-      {withVanta && <VantaBackground enabled={true} />}
+      {withVanta && (
+        <VantaBackground
+          enabled={true}
+        />
+      )}
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-teal-300 via-white to-teal-500
@@ -48,31 +49,29 @@ const Hero = ({ scrollToSection, withVanta }: Props) => {
             <div className="space-y-4">
               <motion.h1
                 variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
-                className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white"
+                className="text-5xl md:text-6xl font-bold leading-tight
+                           text-gray-900 dark:text-white"
               >
-                <Trans i18nKey="hero.title">
-                  Building Your <span className="text-teal-600 dark:text-teal-400">Dreams</span> Into Reality
-                </Trans>
+                Building Your <span className="text-teal-600 dark:text-teal-400">Dreams</span> Into Reality
               </motion.h1>
 
               <motion.p
                 variants={fadeIn}
                 className="text-xl leading-relaxed text-gray-600 dark:text-gray-400"
               >
-                {t("hero.subtitle")}
+                Dar El-Meamar is your trusted partner in construction excellence.
+                We transform visions into architectural masterpieces.
               </motion.p>
             </div>
 
             <motion.div variants={scaleIn} className="flex flex-col sm:flex-row gap-4">
               <HeroButton
-                label={t("hero.btnStart")}
+                label="Start Your Project"
                 onClick={() => scrollToSection('contact')}
                 primary
               />
               <HeroButton
-                label={t("hero.btnWork")}
+                label="View Our Work"
                 onClick={() => scrollToSection('works')}
               />
             </motion.div>
@@ -102,7 +101,7 @@ const Hero = ({ scrollToSection, withVanta }: Props) => {
                     variants={fadeIn}
                     className="text-2xl font-bold text-white dark:text-teal-100"
                   >
-                    {t("hero.badge")}
+                    Excellence in Construction
                   </motion.p>
                 </div>
               </motion.div>

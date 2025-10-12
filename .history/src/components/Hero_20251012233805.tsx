@@ -13,6 +13,7 @@ import {
   hoverGlow,
 } from '../utils/animations';
 import { useTranslation, Trans } from "react-i18next";
+import BlurText from './Tools/motion/BlurText';
 
 interface Props {
   scrollToSection: (id: string) => void;
@@ -21,6 +22,15 @@ interface Props {
 
 const Hero = ({ scrollToSection, withVanta }: Props) => {
   const { t, i18n } = useTranslation();
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
+
+  // const handleAnimationCompleteText = () => {
+  //   <Trans i18nKey="hero.title">
+  //     Building Your <span className="text-teal-600 dark:text-teal-400">Dreams</span> Into Reality
+  //   </Trans>;
+  // };
 
   return (
     <motion.section
@@ -48,10 +58,16 @@ const Hero = ({ scrollToSection, withVanta }: Props) => {
             <div className="space-y-4">
               <motion.h1
                 variants={textVariant}
-                initial="hidden"
-                whileInView="visible"
                 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white"
               >
+                <BlurText
+                  text={t("hero.title")}
+                  delay={360}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+                />
                 <Trans i18nKey="hero.title">
                   Building Your <span className="text-teal-600 dark:text-teal-400">Dreams</span> Into Reality
                 </Trans>
