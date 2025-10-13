@@ -59,6 +59,8 @@ const Works = () => {
         <motion.div
           className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center"
           variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
         >
           {stats.map((stat, idx) => (
             <motion.div
@@ -80,7 +82,7 @@ const Works = () => {
                   className="text-5xl font-bold text-white dark:text-teal-400"
                 />
                 {stat.suffix && (
-                  <span className="text-5xl  font-bold">{stat.suffix}</span>
+                  <span className="text-4xl">{stat.suffix}</span>
                 )}
               </motion.p>
               <motion.p

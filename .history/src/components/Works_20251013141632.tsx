@@ -44,8 +44,6 @@ const Works = () => {
         <motion.div
           className="text-center mb-16"
           variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-teal-300">
             {t("works.title")}
@@ -80,7 +78,7 @@ const Works = () => {
                   className="text-5xl font-bold text-white dark:text-teal-400"
                 />
                 {stat.suffix && (
-                  <span className="text-5xl  font-bold">{stat.suffix}</span>
+                  <span className="text-4xl">{stat.suffix}</span>
                 )}
               </motion.p>
               <motion.p

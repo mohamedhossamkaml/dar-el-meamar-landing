@@ -1,45 +1,37 @@
-import { motion } from "framer-motion";
-import CountUp from "./Tools/motion/CountUp";
+import { motion } from 'framer-motion';
+import CountUp from './Tools/motion/CountUp'
 import myImage from "../assets/bg.png"; // Ensure the path is correct
 import {
   fadeInUp,
   fadeIn,
   scaleIn,
   staggerContainer,
-} from "../utils/animations";
+} from '../utils/animations';
 import { useTranslation } from "react-i18next";
 
 const Works = () => {
   const { t, i18n } = useTranslation();
 
-  // Fetch stats from translation file
+
   const stats = t("works.stats", { returnObjects: true }) as {
     value: string;
     label: string;
-    suffix?: string;
+    suffix: string;
   }[];
 
   return (
     <motion.section
       key={i18n.language}
       id="works"
-      className="relative py-20 text-white overflow-hidden
-                dark:text-gray-100 transition-colors duration-300"
+      className="py-20 bg-gradient-to-br from-teal-600 to-teal-800 text-white
+                  dark:from-slate-900 dark:to-slate-950 dark:text-gray-100 transition-colors duration-300"
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {/* Background Image + Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${myImage})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-600/80 to-teal-800/90
-                      dark:from-slate-900/90 dark:to-slate-950/95" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      {/* Content Container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           className="text-center mb-16"
@@ -57,7 +49,7 @@ const Works = () => {
 
         {/* Stats Grid */}
         <motion.div
-          className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          className="grid md:grid-cols-4 gap-8 text-center"
           variants={staggerContainer}
         >
           {stats.map((stat, idx) => (
@@ -69,19 +61,17 @@ const Works = () => {
             >
               <motion.p
                 variants={scaleIn}
-                className="flex items-baseline justify-center gap-1 text-5xl font-bold text-white dark:text-teal-400"
+                className="text-5xl font-bold text-white dark:text-teal-400"
               >
                 <CountUp
                   from={0}
-                  to={parseInt(stat.value.replace(/,/g, ""))}
+                  to={parseInt(stat.value.replace(/,/g, ''))}
                   separator=","
                   direction="up"
-                  duration={1.5}
+                  duration={1}
                   className="text-5xl font-bold text-white dark:text-teal-400"
                 />
-                {stat.suffix && (
-                  <span className="text-5xl  font-bold">{stat.suffix}</span>
-                )}
+                <span className="text-5xl font-bold">{stat.suffix}</span>
               </motion.p>
               <motion.p
                 variants={fadeIn}

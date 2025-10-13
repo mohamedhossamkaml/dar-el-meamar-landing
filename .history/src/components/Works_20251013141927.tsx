@@ -80,7 +80,7 @@ const Works = () => {
                   className="text-5xl font-bold text-white dark:text-teal-400"
                 />
                 {stat.suffix && (
-                  <span className="text-5xl  font-bold">{stat.suffix}</span>
+                  <span className="text-4xl">{stat.suffix}</span>
                 )}
               </motion.p>
               <motion.p

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import CountUp from "./Tools/motion/CountUp";
-import myImage from "../assets/bg.png"; // Ensure the path is correct
+import myImage from "../assets/bg.png"; // تأكد إن المسار صحيح
 import {
   fadeInUp,
   fadeIn,
@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 const Works = () => {
   const { t, i18n } = useTranslation();
 
-  // Fetch stats from translation file
+  // جلب البيانات من ملف الترجمة
   const stats = t("works.stats", { returnObjects: true }) as {
     value: string;
     label: string;
@@ -24,7 +24,7 @@ const Works = () => {
       key={i18n.language}
       id="works"
       className="relative py-20 text-white overflow-hidden
-                dark:text-gray-100 transition-colors duration-300"
+                 dark:text-gray-100 transition-colors duration-300"
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
@@ -38,14 +38,12 @@ const Works = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-teal-600/80 to-teal-800/90
                       dark:from-slate-900/90 dark:to-slate-950/95" />
 
-      {/* Content Container */}
+      {/* محتوى السكشن */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           className="text-center mb-16"
           variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white dark:text-teal-300">
             {t("works.title")}
@@ -80,7 +78,7 @@ const Works = () => {
                   className="text-5xl font-bold text-white dark:text-teal-400"
                 />
                 {stat.suffix && (
-                  <span className="text-5xl  font-bold">{stat.suffix}</span>
+                  <span className="text-4xl">{stat.suffix}</span>
                 )}
               </motion.p>
               <motion.p
