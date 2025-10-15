@@ -35,8 +35,8 @@ const Works = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${myImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-700/65 via-teal-800/90 to-teal-950/95
-                      dark:from-slate-900/80 dark:via-slate-950/80 dark:to-slate-950/95" />
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-600/80 to-teal-800/90
+                      dark:from-slate-900/80 dark:via-slate-900/90 dark:to-slate-950/95" />
 
       {/* Content Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
