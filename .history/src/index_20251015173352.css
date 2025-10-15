@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html, body {
-  overflow-x: clip;
-  position: relative;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }

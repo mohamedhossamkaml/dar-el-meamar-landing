@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  outline: 1px solid red;
+}
 
 
 html, body {
-  overflow-x: clip;
-  position: relative;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
