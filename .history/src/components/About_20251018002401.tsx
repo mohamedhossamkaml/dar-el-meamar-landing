@@ -11,6 +11,7 @@ import {
   fadeInLeft,
   fadeInRight,
 } from '../utils/animations';
+import BlueprintAnimation from './Tools/BlueprintAnimation';
 import ConstructionBackground from './Tools/ConstructionBackground';
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
@@ -125,21 +126,20 @@ const About = () => {
           {/* NOTE: The div above is the main centered container for the About section */}
           <motion.div
             variants={fadeInRight}
-            className="relative w-full h-full bg-gradient-to-br from-teal-50 to-teal-100 dark:from-gray-800 dark:to-gray-900
+            className="relative bg-gradient-to-br from-blue-50 to-teal-50 dark:from-gray-800 dark:to-gray-900
                       rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.1)]
                       hover:shadow-[0_8px_30px_rgba(20,184,166,0.3)]
                       transition-shadow duration-300 ease-in-out"
             // when the parent animation completes, reveal the SVG
             onAnimationComplete={() => setSvgVisible(true)}
           >
-
+            <BlueprintAnimation />
             {/* mount the background SVG only after parent animation completes */}
-            {svgVisible && (
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none ">
+            {/* {svgVisible && (
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
                 <ConstructionBackground />
               </div>
-            )}
-
+            )} */}
           </motion.div>
         </motion.div>
       </div>

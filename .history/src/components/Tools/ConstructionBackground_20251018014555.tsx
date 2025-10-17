@@ -12,7 +12,7 @@ const ConstructionBackground = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="0.6"
-              className="text-teal-900 dark:text-teal-300"
+              className="text-teal-900 dark:text-teal-600"
             />
           </pattern>
         </defs>

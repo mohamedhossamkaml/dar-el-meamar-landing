@@ -4,7 +4,7 @@ const ConstructionBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Subtle Grid Pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-6">
+      <svg className="absolute inset-0 w-full h-full opacity-10 dark:opacity-6">
         <defs>
           <pattern id="construction-grid" width="50" height="50" patternUnits="userSpaceOnUse">
             <path
@@ -12,7 +12,7 @@ const ConstructionBackground = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="0.6"
-              className="text-teal-900 dark:text-teal-300"
+              className="text-teal-400"
             />
           </pattern>
         </defs>
@@ -23,12 +23,12 @@ const ConstructionBackground = () => {
       <div className="absolute inset-0 opacity-70 dark:opacity-50">
         {/* Hammer */}
         <motion.div
-          className="absolute top-20 left-8 drop-shadow-lg"
+          className="absolute top-20 left-10 drop-shadow-lg"
           animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         >
           <svg width="86" height="86" viewBox="0 0 24 24" className="text-teal-600">
-            <path d="M14 7l-7 7-2-2 7-7 2 2z" fill="currentColor" opacity="0.88" />
+            <path d="M14 7l-7 7-2-2 7-7 2 2z" fill="currentColor" opacity="0.90" />
             <rect x="15" y="3" width="6" height="4" rx="1" fill="currentColor" opacity="0.95" />
             <circle cx="4" cy="18" r="3" fill="currentColor" opacity="0.85" />
           </svg>
@@ -53,7 +53,7 @@ const ConstructionBackground = () => {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-teal-500 dark:bg-t rounded-full shadow-sm"
+            className="absolute w-2 h-2 bg-teal-500 rounded-full shadow-sm"
             style={{
               left: `${4 + (i * 7.5)}%`,
               top: `${8 + (i % 5) * 18}%`,
@@ -110,7 +110,7 @@ const ConstructionBackground = () => {
 
       {/* Crane */}
       <motion.div
-        className="absolute top-1 right-24 opacity-45 dark:opacity-50 drop-shadow-xl"
+        className="absolute top-8 right-24 opacity-30 dark:opacity-30 drop-shadow-xl"
         animate={{ rotate: [-3, 3, -3] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >

@@ -4,7 +4,7 @@ const ConstructionBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Subtle Grid Pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-6">
+      <svg className="absolute inset-0 w-full h-full opacity-10 dark:opacity-6">
         <defs>
           <pattern id="construction-grid" width="50" height="50" patternUnits="userSpaceOnUse">
             <path
@@ -12,7 +12,7 @@ const ConstructionBackground = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="0.6"
-              className="text-teal-900 dark:text-teal-300"
+              className="text-teal-400"
             />
           </pattern>
         </defs>
@@ -108,18 +108,6 @@ const ConstructionBackground = () => {
         ))}
       </div>
 
-      {/* Crane */}
-      <motion.div
-        className="absolute top-1 right-24 opacity-45 dark:opacity-50 drop-shadow-xl"
-        animate={{ rotate: [-3, 3, -3] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <svg width="160" height="220" viewBox="0 0 120 180" className="text-teal-700">
-          <rect x="58" y="50" width="6" height="130" fill="currentColor" />
-          <rect x="8" y="48" width="104" height="4" fill="currentColor" />
-          <rect x="54" y="44" width="14" height="9" fill="currentColor" />
-        </svg>
-      </motion.div>
     </div>
   );
 };

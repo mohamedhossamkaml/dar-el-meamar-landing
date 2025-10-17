@@ -4,7 +4,7 @@ const ConstructionBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Subtle Grid Pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-6">
+      <svg className="absolute inset-0 w-full h-full opacity-10 dark:opacity-6">
         <defs>
           <pattern id="construction-grid" width="50" height="50" patternUnits="userSpaceOnUse">
             <path
@@ -12,7 +12,7 @@ const ConstructionBackground = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="0.6"
-              className="text-teal-900 dark:text-teal-300"
+              className="text-teal-400"
             />
           </pattern>
         </defs>
@@ -70,41 +70,6 @@ const ConstructionBackground = () => {
               ease: 'easeInOut',
             }}
           />
-        ))}
-      </div>
-
-      {/* Building Silhouettes */}
-      <div className="absolute bottom-0 left-0 right-0 flex items-end justify-around opacity-45 dark:opacity-45">
-        {[80, 120, 70, 100, 85].map((height, i) => (
-          <motion.div
-            key={i}
-            className="rounded-t-lg shadow-inner"
-            style={{ width: '15%', height: `${height}px`, background: 'linear-gradient(to top, #064e3b, #0ea5a9)' }}
-            animate={{
-              height: [`${height * 0.75}px`, `${height}px`, `${height * 0.75}px`],
-            }}
-            transition={{
-              duration: 4 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.2,
-            }}
-          >
-            <div className="grid grid-cols-2 gap-0.5 p-1">
-              {[...Array(Math.floor(height / 18))].map((_, j) => (
-                <motion.div
-                  key={j}
-                  className="bg-yellow-400 h-1.5 rounded-sm"
-                  animate={{ opacity: [0.3, 0.95, 0.3] }}
-                  transition={{
-                    duration: 2,
-                    delay: j * 0.08 + i * 0.25,
-                    repeat: Infinity,
-                  }}
-                />
-              ))}
-            </div>
-          </motion.div>
         ))}
       </div>
 

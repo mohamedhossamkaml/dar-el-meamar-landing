@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 const ConstructionBackground = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div className="absolute inset-0 w-8 h-8  overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Subtle Grid Pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-6">
+      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-20">
         <defs>
           <pattern id="construction-grid" width="50" height="50" patternUnits="userSpaceOnUse">
             <path
@@ -12,7 +12,7 @@ const ConstructionBackground = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="0.6"
-              className="text-teal-900 dark:text-teal-300"
+              className="text-teal-400"
             />
           </pattern>
         </defs>
@@ -36,7 +36,7 @@ const ConstructionBackground = () => {
 
         {/* Hard Hat */}
         <motion.div
-          className="absolute top-1/3 right-2/4 drop-shadow-md"
+          className="absolute top-1/3 right-1/4 drop-shadow-md"
           animate={{ y: [0, -30, 0], rotate: [0, 6, 0] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         >
@@ -53,7 +53,7 @@ const ConstructionBackground = () => {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-teal-500 dark:bg-t rounded-full shadow-sm"
+            className="absolute w-2 h-2 bg-teal-500 rounded-full shadow-sm"
             style={{
               left: `${4 + (i * 7.5)}%`,
               top: `${8 + (i % 5) * 18}%`,
@@ -110,7 +110,7 @@ const ConstructionBackground = () => {
 
       {/* Crane */}
       <motion.div
-        className="absolute top-1 right-24 opacity-45 dark:opacity-50 drop-shadow-xl"
+        className="absolute top-8 right-24 opacity-30 dark:opacity-30 drop-shadow-xl"
         animate={{ rotate: [-3, 3, -3] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >

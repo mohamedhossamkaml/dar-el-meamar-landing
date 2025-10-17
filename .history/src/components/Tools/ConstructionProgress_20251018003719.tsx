@@ -20,40 +20,32 @@ const ConstructionProgress = () => {
   return (
     <div className="w-full h-full space-y-4 p-6">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+        <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
           Construction Progress
         </span>
-        <span className="text-sm font-bold text-teal-700 dark:text-teal-300">
+        <span className="text-sm font-bold text-teal-600 dark:text-teal-400">
           {progress}%
         </span>
       </div>
 
       {/* Progress Bar */}
-      <div
-        className="relative h-10 bg-gray-300 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
-        role="progressbar"
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={progress}
-        aria-label="Construction progress"
-      >
+      <div className="relative h-8 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-inner">
         <motion.div
-          className="absolute inset-y-0 left-0 bg-gradient-to-r from-teal-600 to-teal-700 dark:from-teal-500 dark:to-teal-600 rounded-l-lg shadow-[0_6px_30px_rgba(16,185,129,0.12)]"
+          className="absolute inset-y-0 left-0 bg-gradient-to-r from-teal-500 to-teal-600 dark:from-teal-400 dark:to-teal-500"
           initial={{ width: '0%' }}
           animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.28 }}
+          transition={{ duration: 0.3 }}
         />
 
         {/* Animated stripes */}
         <motion.div
-          className="absolute inset-0 opacity-50 mix-blend-overlay"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage:
-              'repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,0.28) 8px, rgba(255,255,255,0.28) 16px)',
-            filter: 'blur(0.2px)'
+              'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.3) 10px, rgba(255,255,255,0.3) 20px)',
           }}
           animate={{
-            x: [0, 24],
+            x: [0, 20],
           }}
           transition={{
             duration: 1,
@@ -64,36 +56,36 @@ const ConstructionProgress = () => {
 
         {/* Glowing effect */}
         <motion.div
-          className="absolute inset-y-0 right-0 bg-gradient-to-r from-transparent to-white/30"
+          className="absolute inset-y-0 right-0 w-16 bg-gradient-to-r from-transparent to-white/20"
           animate={{
-            opacity: [0.6, 1, 0.6],
+            opacity: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 1.2,
+            duration: 1.5,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          style={{ width: progress > 8 ? '80px' : '0px' }}
+          style={{ width: progress > 10 ? '64px' : '0px' }}
         />
       </div>
 
       {/* Mini construction icons */}
-      <div className="flex items-center justify-between text-sm text-gray-700 dark:text-gray-200">
-        <div className="flex items-center gap-3">
-          <div className="w-4 h-4 bg-teal-600 rounded-full animate-pulse shadow-md" />
-          <span className="font-medium">Building in progress...</span>
-        </div>
+      <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
         <div className="flex items-center gap-2">
+          <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse" />
+          <span>Building in progress...</span>
+        </div>
+        <div className="flex items-center gap-1">
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
-              className="w-2 h-5 bg-teal-600 rounded-sm shadow-inner"
+              className="w-1.5 h-4 bg-teal-500/50 rounded-sm"
               animate={{
-                scaleY: [0.6, 1.05, 0.6],
+                scaleY: [0.5, 1, 0.5],
               }}
               transition={{
                 duration: 0.8,
-                delay: i * 0.08,
+                delay: i * 0.1,
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}

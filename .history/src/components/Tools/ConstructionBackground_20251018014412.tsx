@@ -4,20 +4,6 @@ const ConstructionBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Subtle Grid Pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-6">
-        <defs>
-          <pattern id="construction-grid" width="50" height="50" patternUnits="userSpaceOnUse">
-            <path
-              d="M 50 0 L 0 0 0 50"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="0.6"
-              className="text-teal-900 dark:text-teal-300"
-            />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#construction-grid)" />
-      </svg>
 
       {/* Floating Tools Layer */}
       <div className="absolute inset-0 opacity-70 dark:opacity-50">

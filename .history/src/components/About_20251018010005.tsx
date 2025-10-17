@@ -11,6 +11,7 @@ import {
   fadeInLeft,
   fadeInRight,
 } from '../utils/animations';
+import BlueprintAnimation from './Tools/BlueprintAnimation';
 import ConstructionBackground from './Tools/ConstructionBackground';
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
