@@ -8,10 +8,10 @@ import { BrowserRouter } from 'react-router-dom';
 const BASE_PATH = "/dar-el-meamar-landing";
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename={BASE_PATH}>
       <LanguageProvider>
+    <BrowserRouter basename={BASE_PATH}>
         <App />
-      </LanguageProvider>
     </BrowserRouter>
+      </LanguageProvider>
   </StrictMode>
 );

@@ -24,7 +24,6 @@ const Footer = () => {
           className="text-center space-y-4"
           variants={fadeInUp}
         >
-          {/* Logo Image */}
           <motion.img
             src={logoImage}
             alt="Dar El-Meamar"

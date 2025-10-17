@@ -112,7 +112,7 @@ const Services = () => {
                         max-w-5xl w-full p-3 sm:p-6 transition-all duration-300"
           >
             <div className="p-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-white mb-6">
                 {t.services.typesTitle}
               </h3>
 

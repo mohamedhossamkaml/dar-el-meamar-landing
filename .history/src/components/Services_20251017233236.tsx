@@ -1,7 +1,6 @@
 import { Building2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SeeMoreButton from './Buttons/SeeMoreButton';
-import typesBuildingImage from '../assets/types-of-building-construction-types.png';
 import {
   fadeInUp,
   fadeIn,
@@ -14,6 +13,7 @@ import {
 import { useLanguage } from '../context/LanguageContext';
 import VantaBackground from './Tools/VantaBackground';
 
+const typesBuildingImage = '../assets/types-of-building-construction-types.png';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -112,7 +112,7 @@ const Services = () => {
                         max-w-5xl w-full p-3 sm:p-6 transition-all duration-300"
           >
             <div className="p-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 dark:text-white mb-6">
                 {t.services.typesTitle}
               </h3>
 

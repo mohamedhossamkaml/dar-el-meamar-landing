@@ -8,8 +8,7 @@ import {
 } from '../utils/animations';
 import { useLanguage } from '../context/LanguageContext';
 import VantaBackground from '../components/Tools/VantaBackground';
-
-import typesBuildingImage from '../assets/types-of-building-construction-types.png';
+import
 
 const ServicesPage = () => {
   const { t } = useLanguage();
@@ -122,7 +121,7 @@ const ServicesPage = () => {
                 {t.services.typesTitle}
               </h2>
               <motion.img
-                src={typesBuildingImage}
+                src="/types-of-building-construction-types.png"
                 alt="Types of Building Construction"
                 className="w-full h-auto rounded-xl shadow-lg mx-auto"
                 whileHover={{ scale: 1.02 }}

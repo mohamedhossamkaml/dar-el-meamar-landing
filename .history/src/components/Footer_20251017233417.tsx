@@ -7,10 +7,9 @@ import {
 } from '../utils/animations';
 import { useLanguage } from '../context/LanguageContext';
 
-import logoImage from '../assets/darImg.png';
-
 const Footer = () => {
   const { t } = useLanguage();
+  const logoImage = '/دار المعمار.png';
   return (
     <motion.footer
       className="bg-gray-900 dark:bg-gray-800 text-white py-12"
@@ -24,7 +23,6 @@ const Footer = () => {
           className="text-center space-y-4"
           variants={fadeInUp}
         >
-          {/* Logo Image */}
           <motion.img
             src={logoImage}
             alt="Dar El-Meamar"

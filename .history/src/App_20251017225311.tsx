@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTopButton from './components/Tools/ScrollToTopButton';
@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <>
+    <Router>
       <ScrollToTop />
       <div className="min-h-screen  bg-white dark:bg-gray-900  text-gray-900 dark:text-white transition-colors duration-300">
         <Navbar />
@@ -29,7 +29,7 @@ function App() {
         <Footer />
         <ScrollToTopButton />
       </div>
-    </>
+    </Router>
   );
 }
 
