@@ -4,6 +4,54 @@ export const translations = {
     common: {
       seeMore: 'See More',
     },
+    // About Page (detailed)
+    aboutPage: {
+      hero: {
+        subtitle: 'Building Excellence Since 2000',
+      },
+      company: {
+        title: 'Our Story',
+        paragraphs: [
+          'Founded in 2000, Dar El-Meamar has grown from a small local contractor to one of the region\'s most trusted construction companies. Our journey has been marked by unwavering commitment to quality, innovation, and customer satisfaction.',
+          "Over the past 25 years, we've completed more than 500 projects ranging from residential complexes to commercial towers and industrial facilities. Each project reflects our dedication to excellence and our ability to bring architectural visions to life.",
+          'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
+        ],
+      },
+      coreValues: {
+        title: 'Our Core Values',
+        subtitle: 'The principles that guide everything we do',
+      },
+      values: [
+        { title: 'Quality', description: 'We never compromise on quality and craftsmanship in every project we undertake.' },
+        { title: 'Teamwork', description: 'Our collaborative approach brings together the best talents to deliver exceptional results.' },
+        { title: 'Integrity', description: 'Honesty and transparency are at the core of our business relationships.' },
+        { title: 'Innovation', description: 'We embrace new technologies and methods to stay ahead in the industry.' },
+        { title: 'Excellence', description: 'We strive for perfection in every detail, every time.' },
+        { title: 'Vision', description: 'We look beyond today to build a better tomorrow for our clients.' },
+      ],
+      timeline: {
+        title: 'Our Journey',
+        subtitle: 'Key milestones in our 25-year history',
+        milestones: [
+          { year: '2000', event: 'Company Founded' },
+          { year: '2005', event: 'First Major Commercial Project' },
+          { year: '2010', event: 'Expanded to International Markets' },
+          { year: '2015', event: 'Received Excellence Award' },
+          { year: '2020', event: '500+ Projects Completed' },
+          { year: '2025', event: 'Leading Construction Company' },
+        ],
+      },
+      team: {
+        title: 'Our Leadership Team',
+        subtitle: 'Meet the experts driving our success',
+        members: [
+          { name: 'Ahmed Hassan', role: 'CEO & Founder' },
+          { name: 'Sarah Mohammed', role: 'Chief Architect' },
+          { name: 'Omar Ali', role: 'Project Manager' },
+          { name: 'Fatima Ahmed', role: 'Design Director' },
+        ],
+      },
+    },
     // Navbar
     nav: {
       home: 'Home',
@@ -67,54 +115,7 @@ export const translations = {
         'Customer satisfaction guaranteed',
       ],
     },
-    // About Page (detailed)
-    aboutPage: {
-      hero: {
-        subtitle: 'Building Excellence Since 2000',
-      },
-      company: {
-        title: 'Our Story',
-        paragraphs: [
-          'Founded in 2000, Dar El-Meamar has grown from a small local contractor to one of the region\'s most trusted construction companies. Our journey has been marked by unwavering commitment to quality, innovation, and customer satisfaction.',
-          "Over the past 25 years, we've completed more than 500 projects ranging from residential complexes to commercial towers and industrial facilities. Each project reflects our dedication to excellence and our ability to bring architectural visions to life.",
-          'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
-        ],
-      },
-      coreValues: {
-        title: 'Our Core Values',
-        subtitle: 'The principles that guide everything we do',
-      },
-      values: [
-        { title: 'Quality', description: 'We never compromise on quality and craftsmanship in every project we undertake.' },
-        { title: 'Teamwork', description: 'Our collaborative approach brings together the best talents to deliver exceptional results.' },
-        { title: 'Integrity', description: 'Honesty and transparency are at the core of our business relationships.' },
-        { title: 'Innovation', description: 'We embrace new technologies and methods to stay ahead in the industry.' },
-        { title: 'Excellence', description: 'We strive for perfection in every detail, every time.' },
-        { title: 'Vision', description: 'We look beyond today to build a better tomorrow for our clients.' },
-      ],
-      timeline: {
-        title: 'Our Journey',
-        subtitle: 'Key milestones in our 25-year history',
-        milestones: [
-          { year: '2000', event: 'Company Founded' },
-          { year: '2005', event: 'First Major Commercial Project' },
-          { year: '2010', event: 'Expanded to International Markets' },
-          { year: '2015', event: 'Received Excellence Award' },
-          { year: '2020', event: '500+ Projects Completed' },
-          { year: '2025', event: 'Leading Construction Company' },
-        ],
-      },
-      team: {
-        title: 'Our Leadership Team',
-        subtitle: 'Meet the experts driving our success',
-        members: [
-          { name: 'Ahmed Hassan', role: 'CEO & Founder' },
-          { name: 'Sarah Mohammed', role: 'Chief Architect' },
-          { name: 'Omar Ali', role: 'Project Manager' },
-          { name: 'Fatima Ahmed', role: 'Design Director' },
-        ],
-      },
-    },
+
     // Services Section
     services: {
       title: 'Our Services',
