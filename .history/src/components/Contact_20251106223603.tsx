@@ -140,7 +140,7 @@ const Contact = () => {
           </h3>
           <div className="w-full h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-teal-100 dark:border-teal-900">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3455.2904979818804!2d31.452488!3d29.999814!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDU5JzU5LjMiTiAzMcKwMjcnMDkuMCJF!5e0!3m2!1sar!2seg!4v1762461624106!5m2!1sar!2seg"
+              src="https://www.google.com/maps/place/29%C2%B059'59.3%22N+31%C2%B027'09.0%22E/@29.999814,31.452488,17z/data=!4m4!3m3!8m2!3d29.999814!4d31.452488?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="100%"
               style={{ border: 0 }}
