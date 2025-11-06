@@ -720,7 +720,6 @@ export const translations = {
         subtitle: 'دعنا نحول رؤيتك إلى واقع بخبرتنا وتفانينا',
         button: 'اتصل بنا اليوم',
       },
-      detailsButton: 'عرض التفاصيل',
     },
     // Works Section
     works: {

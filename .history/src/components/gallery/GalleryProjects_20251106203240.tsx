@@ -37,7 +37,7 @@ const GalleryProjects: React.FC = () => {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-gray-100 dark:border-gray-700"
             >
-
+              {/* صورة المشروع */}
               <div className={`relative h-64 bg-gradient-to-br ${project.color} overflow-hidden`}>
                 <motion.img
                   src={project.image}
@@ -54,7 +54,7 @@ const GalleryProjects: React.FC = () => {
                 </div>
               </div>
 
-
+              {/* تفاصيل المشروع */}
               <div className="p-6">
                 <div className="inline-block bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 px-3 py-1 rounded-full text-sm mb-3">
                   {project.category}
@@ -68,7 +68,7 @@ const GalleryProjects: React.FC = () => {
                   {project.location}
                 </div>
 
-
+                {/* زرار فتح الـ Modal */}
                 <button
                   onClick={() => setSelectedProject(project)}
                   className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors"
@@ -81,7 +81,7 @@ const GalleryProjects: React.FC = () => {
         </motion.div>
       </div>
 
-
+      {/* استدعاء الـ Modal */}
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} t={t} />
     </section>
   );

@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer } from '../../utils/animations';
 import { Building2 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import GALLERY_IMAGES from '../../config/galleryImages';
-import ProjectModal from './Modal/ProjectModal';
 
 const GalleryProjects: React.FC = () => {
   const { t } = useLanguage();
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   const projects = [
     { ...t.galleryPage.projects[0], image: GALLERY_IMAGES[0], color: 'from-blue-400 to-blue-600' },
@@ -17,6 +15,9 @@ const GalleryProjects: React.FC = () => {
     { ...t.galleryPage.projects[3], image: GALLERY_IMAGES[3], color: 'from-orange-400 to-orange-600' },
     { ...t.galleryPage.projects[4], image: GALLERY_IMAGES[4], color: 'from-green-400 to-green-600' },
     { ...t.galleryPage.projects[5], image: GALLERY_IMAGES[5], color: 'from-pink-400 to-pink-600' },
+    { ...t.galleryPage.projects[6], image: GALLERY_IMAGES[0], color: 'from-indigo-400 to-indigo-600' },
+    { ...t.galleryPage.projects[7], image: GALLERY_IMAGES[1], color: 'from-cyan-400 to-cyan-600' },
+    { ...t.galleryPage.projects[8], image: GALLERY_IMAGES[2], color: 'from-emerald-400 to-emerald-600' },
   ];
 
   return (
@@ -32,13 +33,15 @@ const GalleryProjects: React.FC = () => {
           {projects.map((project: any, index: number) => (
             <motion.div
               key={project.id}
-              variants={index % 3 === 0 ? fadeInLeft : index % 3 === 1 ? scaleIn : fadeInRight}
+              variants={
+                index % 3 === 0 ? fadeInLeft : index % 3 === 1 ? scaleIn : fadeInRight
+              }
               whileHover={{ y: -4, rotate: 0.5 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-gray-100 dark:border-gray-700"
             >
-
-              <div className={`relative h-64 bg-gradient-to-br ${project.color} overflow-hidden`}>
+              {/* Header image with zoom + sheen */}
+              <div className={`relative h-64 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
                 <motion.img
                   src={project.image}
                   alt={project.title}
@@ -47,6 +50,17 @@ const GalleryProjects: React.FC = () => {
                   whileHover={{ scale: 1.06 }}
                   transition={{ type: "spring", stiffness: 220, damping: 24 }}
                 />
+                {/* Parallax sheen */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <motion.div
+                    className="absolute -inset-10 bg-gradient-to-r from-white/0 via-white/10 to-white/0"
+                    style={{ rotate: -20 }}
+                    initial={{ x: -200 }}
+                    whileHover={{ x: 200 }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                  />
+                </div>
+                {/* Year badge */}
                 <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full">
                   <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
                     {project.year}
@@ -54,7 +68,7 @@ const GalleryProjects: React.FC = () => {
                 </div>
               </div>
 
-
+              {/* Project details */}
               <div className="p-6">
                 <div className="inline-block bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 px-3 py-1 rounded-full text-sm mb-3">
                   {project.category}
@@ -63,26 +77,37 @@ const GalleryProjects: React.FC = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-3">{project.description}</p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-500 mb-4">
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-500">
                   <Building2 size={16} className="mr-2" />
                   {project.location}
                 </div>
-
-
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors"
-                >
-                  {t.galleryPage.detailsButton}
-                </button>
               </div>
+
+              {/* Overlay with fade + lift */}
+              <motion.div
+                className="absolute inset-0 bg-teal-600/90 dark:bg-teal-800/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+              >
+                <motion.div
+                  className="text-white text-center p-6"
+                  initial={{ y: 8, opacity: 0 }}
+                  whileHover={{ y: 0, opacity: 1 }}
+                  transition={{ type: "spring", stiffness: 240, damping: 20 }}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-24 h-24 object-cover rounded-full mx-auto mb-4"
+                  />
+                  <h4 className="text-2xl font-bold mb-2">{t.galleryPage.hover.title}</h4>
+                  <p className="text-teal-100">{t.galleryPage.hover.description}</p>
+                </motion.div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
       </div>
-
-
-      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} t={t} />
     </section>
   );
 };
