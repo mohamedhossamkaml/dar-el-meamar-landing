@@ -3,19 +3,21 @@ import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer } from '../../utils/animations';
 import { Building2 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { PROJECTS_EXTRA } from '../../config/projectsExtra';
+import GALLERY_IMAGES from '../../config/galleryImages';
 import ProjectModal from './Modal/ProjectModal';
 
 const GalleryProjects: React.FC = () => {
   const { t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
-  const projects = t.galleryPage.projects.map((proj: any) => ({
-    ...proj,
-    image: PROJECTS_EXTRA[proj.id]?.main || '',
-    images: PROJECTS_EXTRA[proj.id]?.details || [],
-    color: PROJECTS_EXTRA[proj.id]?.color || 'from-gray-400 to-gray-600',
-  }));
+  const projects = [
+    { ...t.galleryPage.projects[0], image: GALLERY_IMAGES[0], color: 'from-blue-400 to-blue-600' },
+    { ...t.galleryPage.projects[1], image: GALLERY_IMAGES[1], color: 'from-teal-400 to-teal-600' },
+    { ...t.galleryPage.projects[2], image: GALLERY_IMAGES[2], color: 'from-purple-400 to-purple-600' },
+    { ...t.galleryPage.projects[3], image: GALLERY_IMAGES[3], color: 'from-orange-400 to-orange-600' },
+    { ...t.galleryPage.projects[4], image: GALLERY_IMAGES[4], color: 'from-green-400 to-green-600' },
+    { ...t.galleryPage.projects[5], image: GALLERY_IMAGES[5], color: 'from-pink-400 to-pink-600' },
+  ];
 
   return (
     <section className="py-20 bg-white dark:bg-gray-900">

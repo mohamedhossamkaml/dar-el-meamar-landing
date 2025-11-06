@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer } from '../../utils/animations';
 import { Building2 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { PROJECTS_EXTRA } from '../../config/projectsExtra';
+import { PROJECTS_EXTRA } from '../../config/projectsConfig';
 import ProjectModal from './Modal/ProjectModal';
 
 const GalleryProjects: React.FC = () => {
@@ -12,8 +12,7 @@ const GalleryProjects: React.FC = () => {
 
   const projects = t.galleryPage.projects.map((proj: any) => ({
     ...proj,
-    image: PROJECTS_EXTRA[proj.id]?.main || '',
-    images: PROJECTS_EXTRA[proj.id]?.details || [],
+    images: PROJECTS_EXTRA[proj.id]?.images || [],
     color: PROJECTS_EXTRA[proj.id]?.color || 'from-gray-400 to-gray-600',
   }));
 

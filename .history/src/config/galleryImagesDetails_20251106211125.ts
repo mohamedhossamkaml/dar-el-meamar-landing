@@ -1,7 +1,7 @@
 // config/galleryImages.ts
 // Default gallery images (real-estate themed).
 
-const GALLERY_IMAGES: string[] = [
+const GALLERY_IMAGES_DETAILS: string[] = [
   'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1800&q=80',
   'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80',
   'https://cdn.pixabay.com/photo/2017/03/26/16/06/exzenterhaus-2175925_1280.jpg',
@@ -14,4 +14,4 @@ const GALLERY_IMAGES: string[] = [
   'https://cdn.pixabay.com/photo/2015/12/15/08/53/city-1093864_1280.jpg',
 ];
 
-export default GALLERY_IMAGES;
+export default GALLERY_IMAGES_DETAILS;

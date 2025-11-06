@@ -12,8 +12,7 @@ const GalleryProjects: React.FC = () => {
 
   const projects = t.galleryPage.projects.map((proj: any) => ({
     ...proj,
-    image: PROJECTS_EXTRA[proj.id]?.main || '',
-    images: PROJECTS_EXTRA[proj.id]?.details || [],
+    images: PROJECTS_EXTRA[proj.id]?.images || [],
     color: PROJECTS_EXTRA[proj.id]?.color || 'from-gray-400 to-gray-600',
   }));
 

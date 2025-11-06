@@ -8,7 +8,7 @@ interface ProjectModalProps {
   t: any;
 }
 
-const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
+const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   if (!project) return null;
@@ -36,12 +36,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
         >
           {/* Modal content */}
           <motion.div
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full p-6 relative flex flex-col"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full p-6 relative"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
+            {/* Close Button (دائرة أنيقة) */}
+            <button
+              onClick={onClose}
+              className="absolute top-3 right-3 bg-gray-200 dark:bg-gray-700 rounded-full p-2 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            >
+              <X size={20} className="text-gray-700 dark:text-gray-200" />
+            </button>
+
             {/* Single Image Viewer */}
             <div className="relative mb-6 flex items-center justify-center">
               <motion.img
@@ -72,32 +80,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
             </div>
 
             {/* Project details */}
-            <div className="flex items-center justify-between gap-4 mt-4">
-              <div className="flex flex-col">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                  {project.title}
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                  <Building2 size={16} className="mr-2" />
-                  {project.location}
-                </div>
-                <span className="inline-block bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 px-3 py-1 rounded-full text-xs mt-2">
-                  {project.category}
-                </span>
-              </div>
-
-              {/* Close Button at bottom */}
-              <button
-                onClick={onClose}
-                className="bg-red-600 text-white rounded-md px-4 py-2 bottom-0 hover:bg-red-700 transition flex items-center gap-2 h-fit"
-              >
-                <X size={20} />
-                {t.galleryPage.closeButton || 'Close'}
-              </button>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              {project.title}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              {project.description}
+            </p>
+            <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+              <Building2 size={16} className="mr-2" />
+              {project.location}
             </div>
+            <span className="inline-block bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 px-3 py-1 rounded-full text-sm">
+              {project.category}
+            </span>
           </motion.div>
         </motion.div>
       )}

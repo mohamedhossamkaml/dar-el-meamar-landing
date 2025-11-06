@@ -92,9 +92,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
               {/* Close Button at bottom */}
               <button
                 onClick={onClose}
-                className="bg-red-600 text-white rounded-md px-4 py-2 bottom-0 hover:bg-red-700 transition flex items-center gap-2 h-fit"
+                className="bg-red-600 text-white rounded-md px-4 py-2 hover:bg-red-700 transition flex items-center gap-2 h-fit"
               >
-                <X size={20} />
+                <X size={19} />
                 {t.galleryPage.closeButton || 'Close'}
               </button>
             </div>
