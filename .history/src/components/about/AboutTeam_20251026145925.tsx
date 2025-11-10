@@ -1,0 +1,58 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { scaleIn, staggerContainer } from '../../utils/animations';
+import { Building2, Users, Target, Award } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
+
+const memberIcons = [Building2, Target, Users, Award];
+
+const AboutTeam: React.FC = () => {
+  const { t } = useLanguage();
+  const membersFromT = t.aboutPage.team.members;
+
+  return (
+    <section className="py-20 bg-white dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="text-center mb-16"
+          variants={scaleIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t.aboutPage.team.title}</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">{t.aboutPage.team.subtitle}</p>
+        </motion.div>
+
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {membersFromT.map((member, index) => {
+            const Icon = memberIcons[index] || Building2;
+            return (
+              <motion.div
+                key={index}
+                variants={scaleIn}
+                className="bg-gradient-to-br from-teal-50 to-white dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all text-center"
+              >
+                <div className="bg-teal-100 dark:bg-teal-900 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon className="text-teal-600 dark:text-teal-400" size={48} />
+                  <img src={member.image} alt={member.name} className="w-24 h-24 rounded-full" />
+
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{member.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{member.role}</p>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutTeam;

@@ -1,0 +1,92 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+type ImageSliderProps = {
+  images: string[];
+  interval?: number; // ms
+  transitionDuration?: number; // seconds
+  className?: string;
+  ariaLabel?: string;
+  pauseOnHover?: boolean;
+};
+
+const ImageSlider: React.FC<ImageSliderProps> = ({
+  images,
+  interval = 4500,
+  transitionDuration = 0.9,
+  className = '',
+  ariaLabel = 'Background image slider',
+  pauseOnHover = true,
+}) => {
+  const [index, setIndex] = useState(0);
+  const mounted = useRef(true);
+  const hoverRef = useRef(false);
+
+  useEffect(() => {
+    mounted.current = true;
+  if (!images || images.length <= 1) return;
+
+    const tick = () => {
+      setIndex((i) => (i + 1) % images.length);
+    };
+
+    const id = window.setInterval(() => {
+      if (pauseOnHover && hoverRef.current) return;
+      tick();
+    }, interval);
+
+    return () => {
+      mounted.current = false;
+      window.clearInterval(id);
+    };
+  }, [images, interval, pauseOnHover]);
+
+  if (!images || images.length === 0) return null;
+
+  // Motion variants for image enter/exit
+  const variants = {
+    enter: { opacity: 0, scale: 1.03, y: 8 },
+    center: { opacity: 1, scale: 1, y: 0 },
+    exit: { opacity: 0, scale: 0.97, y: -6 },
+  };
+
+  return (
+    <div
+      className={`absolute inset-0 overflow-hidden ${className}`}
+      aria-hidden="true"
+      aria-label={ariaLabel}
+      onMouseEnter={() => (hoverRef.current = true)}
+      onMouseLeave={() => (hoverRef.current = false)}
+      onTouchStart={() => pauseOnHover && (hoverRef.current = true)}
+      onTouchEnd={() => pauseOnHover && (hoverRef.current = false)}
+    >
+      <AnimatePresence initial={false} mode="wait">
+        <motion.img
+          key={images[index] + index}
+          src={images[index]}
+          alt=""
+          loading={index === 0 ? 'eager' : 'lazy'}
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ zIndex: 0, willChange: 'opacity, transform' }}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: transitionDuration, ease: 'easeInOut' }}
+        />
+      </AnimatePresence>
+
+      {/* Enhanced overlay with gradient and blur for better content contrast */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Dark overlay with opacity */}
+        <div className="absolute inset-0 bg-black/30" />
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
+        {/* Optional: Very subtle blur effect on the entire background */}
+        <div className="absolute inset-0 backdrop-blur-[2px]" />
+      </div>
+    </div>
+  );
+};
+
+export default ImageSlider;

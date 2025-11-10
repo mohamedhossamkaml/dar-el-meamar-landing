@@ -1,0 +1,518 @@
+export const translations = {
+  en: {
+    // Common
+    common: {
+      seeMore: 'See More',
+    },
+    // About Page (detailed)
+    aboutPage: {
+      hero: {
+        subtitle: 'Building Excellence Since 2000',
+      },
+      company: {
+        title: 'Our Story',
+        paragraphs: [
+          'Founded in 2000, Dar El-Meamar has grown from a small local contractor to one of the region\'s most trusted construction companies. Our journey has been marked by unwavering commitment to quality, innovation, and customer satisfaction.',
+          "Over the past 25 years, we've completed more than 500 projects ranging from residential complexes to commercial towers and industrial facilities. Each project reflects our dedication to excellence and our ability to bring architectural visions to life.",
+          'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
+        ],
+      },
+      coreValues: {
+        title: 'Our Core Values',
+        subtitle: 'The principles that guide everything we do',
+      },
+      values: [
+        { title: 'Quality', description: 'We never compromise on quality and craftsmanship in every project we undertake.' },
+        { title: 'Teamwork', description: 'Our collaborative approach brings together the best talents to deliver exceptional results.' },
+        { title: 'Integrity', description: 'Honesty and transparency are at the core of our business relationships.' },
+        { title: 'Innovation', description: 'We embrace new technologies and methods to stay ahead in the industry.' },
+        { title: 'Excellence', description: 'We strive for perfection in every detail, every time.' },
+        { title: 'Vision', description: 'We look beyond today to build a better tomorrow for our clients.' },
+      ],
+      timeline: {
+        title: 'Our Journey',
+        subtitle: 'Key milestones in our 25-year history',
+        milestones: [
+          { year: '2000', event: 'Company Founded' },
+          { year: '2005', event: 'First Major Commercial Project' },
+          { year: '2010', event: 'Expanded to International Markets' },
+          { year: '2015', event: 'Received Excellence Award' },
+          { year: '2020', event: '500+ Projects Completed' },
+          { year: '2025', event: 'Leading Construction Company' },
+        ],
+      },
+      team: {
+        title: 'Our Leadership Team',
+        subtitle: 'Meet the experts driving our success',
+        members: [
+          { name: 'Ahmed Hassan', role: 'CEO & Founder' },
+          { name: 'Sarah Mohammed', role: 'Chief Architect' },
+          { name: 'Omar Ali', role: 'Project Manager' },
+          { name: 'Fatima Ahmed', role: 'Design Director' },
+        ],
+      },
+    },
+    // Navbar
+    nav: {
+      home: 'Home',
+      about: 'About',
+      services: 'Services',
+      gallery: 'Gallery',
+      works: 'Works',
+      contact: 'Contact Us',
+    },
+    // Hero Section
+    hero: {
+      title: 'Building Your Dreams Into Reality',
+      titleStart: "Building Your",
+      titleHighlight: "Dreams",
+      titleEnd: "Into Reality",
+      subtitle: 'Leading construction company delivering excellence in every project',
+      cta: 'Get Started',
+      learnMore: 'Learn More',
+    },
+    // About Section
+    about: {
+      title: 'About Us',
+      subtitle: 'Excellence in Construction',
+      description: 'Dar El-Meamar is a leading construction company with years of experience in delivering high-quality projects. We specialize in residential, commercial, and industrial construction.',
+      blueprint: 'BLUEPRINT',
+      cards: [
+        {
+          title: 'Our Vision',
+          description: 'To be the leading construction company, setting new standards in quality, innovation, and customer satisfaction across the region.',
+        },
+        {
+          title: 'Our Mission',
+          description: 'Delivering exceptional construction projects that exceed expectations through expertise, dedication, and attention to every detail.',
+        },
+        {
+          title: 'Our Values',
+          description: 'Integrity, quality craftsmanship, innovation, and building lasting relationships with our clients and community.',
+        },
+      ],
+      precision: {
+        title: 'Precision in Every Detail',
+        description: 'Our expert team transforms architectural blueprints into stunning realities. From initial planning to final execution, we ensure every measurement, every angle, and every detail is perfect.',
+        points: [
+          '25+ Years of Experience',
+          '500+ Completed Projects',
+          '100% Quality Guaranteed',
+          'Award-Winning Designs',
+        ],
+      },
+      stats: {
+        projects: 'Completed Projects',
+        clients: 'Happy Clients',
+        experience: 'Years Experience',
+        awards: 'Awards Won',
+      },
+      points: [
+        'Professional and experienced team',
+        'High-quality materials and workmanship',
+        'On-time project delivery',
+        'Competitive pricing',
+        'Customer satisfaction guaranteed',
+      ],
+    },
+    
+    // Services Section
+    services: {
+      title: 'Our Services',
+      subtitle: 'What We Offer',
+      typesTitle: 'Types of Building Construction',
+      list: [
+        {
+          title: 'Residential Construction',
+          desc: 'Building homes that combine comfort, style, and functionality for modern living.',
+        },
+        {
+          title: 'Commercial Projects',
+          desc: 'Creating professional spaces that enhance business operations and brand image.',
+        },
+        {
+          title: 'Interior Design',
+          desc: 'Transforming spaces with innovative designs that reflect your unique vision.',
+        },
+        {
+          title: 'Renovation Services',
+          desc: 'Modernizing existing structures with quality upgrades and expert craftsmanship.',
+        },
+        {
+          title: 'Consultation',
+          desc: 'Expert advice and planning to ensure your project success from start to finish.',
+        },
+        {
+          title: 'Project Management',
+          desc: 'Comprehensive oversight ensuring timely delivery within budget and quality standards.',
+        },
+      ],
+    },
+    // Gallery Section
+    gallery: {
+      title: 'Our Projects',
+      subtitle: 'A showcase of our finest construction achievements',
+    },
+    // Gallery Page (detailed)
+    galleryPage: {
+      hero: {
+        subtitle: 'Explore Our Portfolio of Exceptional Projects',
+      },
+      stats: [
+        { number: '500+', label: 'Completed Projects' },
+        { number: '25+', label: 'Years of Experience' },
+        { number: '100+', label: 'Active Projects' },
+        { number: '1000+', label: 'Happy Clients' },
+      ],
+      categories: [
+        { name: 'All Projects', count: 24 },
+        { name: 'Residential', count: 10 },
+        { name: 'Commercial', count: 8 },
+        { name: 'Industrial', count: 4 },
+        { name: 'Hotels', count: 2 },
+      ],
+      projects: [
+        {
+          id: 1,
+          title: 'Luxury Residence Complex',
+          category: 'Residential',
+          location: 'New Cairo, Egypt',
+          year: '2024',
+          description: 'Modern luxury apartments with premium amenities',
+        },
+        {
+          id: 2,
+          title: 'Downtown Office Tower',
+          category: 'Commercial',
+          location: 'Business District, Cairo',
+          year: '2023',
+          description: 'State-of-the-art commercial building with smart technology',
+        },
+        {
+          id: 3,
+          title: 'Industrial Manufacturing Facility',
+          category: 'Industrial',
+          location: '10th of Ramadan City',
+          year: '2023',
+          description: 'Advanced manufacturing plant with automated systems',
+        },
+        {
+          id: 4,
+          title: 'Boutique Hotel & Resort',
+          category: 'Hotels',
+          location: 'Sharm El Sheikh',
+          year: '2024',
+          description: 'Luxury resort with world-class facilities',
+        },
+        {
+          id: 5,
+          title: 'Modern Villa Community',
+          category: 'Residential',
+          location: 'Sheikh Zayed, Giza',
+          year: '2024',
+          description: 'Exclusive gated community with contemporary design',
+        },
+        {
+          id: 6,
+          title: 'Shopping Mall Complex',
+          category: 'Commercial',
+          location: 'Alexandria',
+          year: '2023',
+          description: 'Multi-level retail and entertainment center',
+        },
+        {
+          id: 7,
+          title: 'Logistics Warehouse',
+          category: 'Industrial',
+          location: 'Port Said',
+          year: '2022',
+          description: 'Modern storage and distribution facility',
+        },
+        {
+          id: 8,
+          title: 'Residential Towers',
+          category: 'Residential',
+          location: 'Nasr City, Cairo',
+          year: '2023',
+          description: 'Twin high-rise residential buildings',
+        },
+        {
+          id: 9,
+          title: 'Corporate Headquarters',
+          category: 'Commercial',
+          location: 'Smart Village, Giza',
+          year: '2024',
+          description: 'Sustainable corporate campus',
+        },
+      ],
+      hover: {
+        title: 'View Project',
+        description: 'Click to see more details',
+      },
+      cta: {
+        title: 'Ready to Start Your Project?',
+        subtitle: "Let's bring your vision to life with our expertise and dedication",
+        button: 'Contact Us Today',
+      },
+    },
+    // Works Section
+    works: {
+      title: 'Our Achievements',
+      subtitle: 'Delivering excellence across diverse construction projects',
+      stats:
+        {
+          projects: '500',
+          clients: '300',
+          experience: '15',
+          awards: '50',
+          Satisfaction:'100'
+        },
+        labels: {
+          projects: 'Completed Projects',
+          clients: 'Happy Clients',
+          experience: 'Years Experience',
+          awards: 'Awards Won',
+          Satisfaction:'Satisfaction Rate'
+      },
+      suffix: {
+        projects: '+',
+        clients: '+',
+        experience: 'years',
+        awards: '+',
+        Satisfaction:'%'
+      }
+
+    },
+    // Contact Section
+    contact: {
+      title: 'Contact Us',
+      subtitle: "Let's discuss your next construction project",
+      form: {
+        name: 'Your Name',
+        email: 'Your Email',
+        message: 'Your Message',
+        send: 'Send Message',
+      },
+      info: {
+        address: 'Location',
+        phone: 'Phone',
+        email: 'Email',
+      },
+    },
+    // Footer
+    footer: {
+      about: 'About Company',
+      description: 'Dar El-Meamar is a leading construction company dedicated to building excellence.',
+      quickLinks: 'Quick Links',
+      followUs: 'Follow Us',
+      rights: 'All rights reserved.',
+    },
+  },
+  ar: {
+    // Common
+    common: {
+      seeMore: 'المزيد',
+    },
+    // Navbar
+    nav: {
+      home: 'الرئيسية',
+      about: 'من نحن',
+      services: 'خدماتنا',
+      gallery: 'المعرض',
+      works: 'أعمالنا',
+      contact: 'اتصل بنا',
+    },
+    // Hero Section
+    hero: {
+      title: 'نبني أحلامك لتصبح حقيقة',
+      titleStart: "نبني",
+      titleHighlight: "أحلامك",
+      titleEnd: "لتصبح حقيقة",
+      subtitle: 'شركة رائدة في مجال البناء والتشييد نقدم التميز في كل مشروع',
+      cta: 'ابدأ الآن',
+      learnMore: 'اعرف المزيد',
+    },
+    // About Section
+    about: {
+      title: 'من نحن',
+      subtitle: 'التميز في البناء',
+      description: 'دار المعمار هي شركة رائدة في مجال البناء والتشييد مع سنوات من الخبرة في تقديم مشاريع عالية الجودة. نحن متخصصون في البناء السكني والتجاري والصناعي.',
+      blueprint: 'مخطط هندسي',
+      cards: [
+        {
+          title: 'رؤيتنا',
+          description: 'أن نكون شركة البناء الرائدة، ونضع معايير جديدة في الجودة والابتكار ورضا العملاء في جميع أنحاء المنطقة.',
+        },
+        {
+          title: 'مهمتنا',
+          description: 'تقديم مشاريع بناء استثنائية تتجاوز التوقعات من خلال الخبرة والتفاني والاهتمام بكل التفاصيل.',
+        },
+        {
+          title: 'قيمنا',
+          description: 'النزاهة والحرفية عالية الجودة والابتكار وبناء علاقات دائمة مع عملائنا ومجتمعنا.',
+        },
+      ],
+      precision: {
+        title: 'الدقة في كل التفاصيل',
+        description: 'يحول فريقنا الخبير المخططات المعمارية إلى حقائق مذهلة. من التخطيط الأولي إلى التنفيذ النهائي، نضمن أن كل قياس وكل زاوية وكل تفاصيل مثالية.',
+        points: [
+          'أكثر من 25 عامًا من الخبرة',
+          'أكثر من 500 مشروع مكتمل',
+          '100٪ جودة مضمونة',
+          'تصاميم حائزة على جوائز',
+        ],
+      },
+      stats: {
+        projects: 'مشروع مكتمل',
+        clients: 'عميل سعيد',
+        experience: 'سنة خبرة',
+        awards: 'جائزة',
+      },
+      points: [
+        'فريق محترف وذو خبرة',
+        'مواد عالية الجودة وحرفية متقنة',
+        'تسليم المشاريع في الوقت المحدد',
+        'أسعار تنافسية',
+        'رضا العملاء مضمون',
+      ],
+    },
+    // About Page (detailed) - Arabic translations
+    aboutPage: {
+      hero: {
+        subtitle: 'التميز في البناء منذ عام 2000',
+      },
+      company: {
+        title: 'قصتنا',
+        paragraphs: [
+          'تأسست دار المعمار في عام 2000 ونمت من مقاول محلي صغير إلى إحدى أكثر شركات البناء موثوقية في المنطقة. لقد تميّزت رحلتنا بالتزام لا يتزعزع بالجودة والابتكار ورضا العملاء.',
+          'على مدار 25 عامًا، أنجزنا أكثر من 500 مشروع تتراوح بين مجمعات سكنية وأبراج تجارية ومرافق صناعية. يعكس كل مشروع التزامنا بالتميز وقدرتنا على تحويل الرؤى المعمارية إلى واقع.',
+          'نحن اليوم من الرواد في الصناعة، نجمع بين الحرفية التقليدية والتقنيات الحديثة لتقديم مشاريع تتجاوز التوقعات وتدوم عبر الزمن.',
+        ],
+      },
+      coreValues: {
+        title: 'قيمنا الأساسية',
+        subtitle: 'المبادئ التي توجه كل ما نقوم به',
+      },
+      values: [
+        { title: 'الجودة', description: 'لا نساوم أبداً على الجودة والحرفية في كل مشروع نقوم به.' },
+        { title: 'العمل الجماعي', description: 'نهجنا التعاوني يجمع أفضل المواهب لتقديم نتائج استثنائية.' },
+        { title: 'النزاهة', description: 'الصدق والشفافية هما أساس علاقاتنا التجارية.' },
+        { title: 'الابتكار', description: 'نحتضن التقنيات والأساليب الجديدة لنكون في مقدمة القطاع.' },
+        { title: 'التميز', description: 'نسعى إلى الكمال في كل تفصيل، في كل مرة.' },
+        { title: 'الرؤية', description: 'ننظر إلى ما بعد اليوم لبناء غد أفضل لعملائنا.' },
+      ],
+      timeline: {
+        title: 'رحلتنا',
+        subtitle: 'محطات رئيسية في تاريخنا على مدار 25 عاماً',
+        milestones: [
+          { year: '2000', event: 'تأسيس الشركة' },
+          { year: '2005', event: 'أول مشروع تجاري هام' },
+          { year: '2010', event: 'التوسع إلى الأسواق الدولية' },
+          { year: '2015', event: 'حصولنا على جائزة التميز' },
+          { year: '2020', event: 'أكثر من 500 مشروع مكتمل' },
+          { year: '2025', event: 'قيادة قطاع التشييد' },
+        ],
+      },
+      team: {
+        title: 'فريق القيادة',
+        subtitle: 'التعرف على الخبراء الذين يقودون نجاحنا',
+        members: [
+          { name: 'Ahmed Hassan', role: 'المدير التنفيذي والمؤسس' },
+          { name: 'Sarah Mohammed', role: 'المهندس المعماري الرئيسي' },
+          { name: 'Omar Ali', role: 'مدير المشروع' },
+          { name: 'Fatima Ahmed', role: 'مديرة التصميم' },
+        ],
+      },
+    },
+    // Services Section
+    services: {
+      title: 'خدماتنا',
+      subtitle: 'ما نقدمه',
+      typesTitle: 'أنواع البناء والتشييد',
+      list: [
+        {
+          title: 'البناء السكني',
+          desc: 'بناء منازل تجمع بين الراحة والأناقة والوظائف للحياة العصرية.',
+        },
+        {
+          title: 'المشاريع التجارية',
+          desc: 'إنشاء مساحات احترافية تعزز عمليات الأعمال والصورة التجارية.',
+        },
+        {
+          title: 'التصميم الداخلي',
+          desc: 'تحويل المساحات بتصاميم مبتكرة تعكس رؤيتك الفريدة.',
+        },
+        {
+          title: 'خدمات الترميم',
+          desc: 'تحديث الهياكل القائمة بترقيات عالية الجودة وحرفية خبيرة.',
+        },
+        {
+          title: 'الاستشارات',
+          desc: 'نصائح وتخطيط احترافي لضمان نجاح مشروعك من البداية إلى النهاية.',
+        },
+        {
+          title: 'إدارة المشاريع',
+          desc: 'إشراف شامل يضمن التسليم في الوقت المحدد ضمن الميزانية ومعايير الجودة.',
+        },
+      ],
+    },
+    // Gallery Section
+    gallery: {
+      title: 'مشاريعنا',
+      subtitle: 'عرض لأفضل إنجازاتنا في مجال البناء والتشييد',
+    },
+    // Works Section
+    works: {
+      title: 'إنجازاتنا',
+      subtitle: 'تقديم التميز عبر مشاريع البناء المتنوعة',
+      stats: {
+        projects: '500',
+        clients: '300',
+        experience: '15',
+        awards: '50',
+        Satisfaction:'100'
+      },
+      labels: {
+        projects: 'مشروع مكتمل',
+        clients: 'عميل سعيد',
+        experience: 'سنة خبرة',
+        awards: 'جائزة',
+        Satisfaction:'معدل رضاالعملاء'
+      },
+        suffix: {
+        projects: '+',
+        clients: '+',
+        experience: 'سنه',
+        awards: '+',
+        Satisfaction:'%'
+      }
+    },
+    // Contact Section
+    contact: {
+      title: 'اتصل بنا',
+      subtitle: 'دعنا نناقش مشروعك القادم في مجال البناء',
+      form: {
+        name: 'اسمك',
+        email: 'بريدك الإلكتروني',
+        message: 'رسالتك',
+        send: 'إرسال الرسالة',
+      },
+      info: {
+        address: 'الموقع',
+        phone: 'الهاتف',
+        email: 'البريد الإلكتروني',
+      },
+    },
+    // Footer
+    footer: {
+      about: 'عن الشركة',
+      description: 'دار المعمار شركة رائدة في البناء والتشييد ملتزمة ببناء التميز.',
+      quickLinks: 'روابط سريعة',
+      followUs: 'تابعنا',
+      rights: 'جميع الحقوق محفوظة.',
+    },
+  },
+};
+
+export type Language = 'en' | 'ar';
+export type TranslationKey = typeof translations.en;
