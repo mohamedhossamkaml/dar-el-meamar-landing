@@ -9,7 +9,7 @@ import ServicesPage from './pages/ServicesPage';
 import GalleryPage from './pages/GalleryPage';
 import WorksPage from './pages/WorksPage';
 import Contact from './components/Contact';
-import SocialContact from './components/SocialContact/SocialContact';
+import SocialContact from './components/SocialContact';
 
 function App() {
   return (

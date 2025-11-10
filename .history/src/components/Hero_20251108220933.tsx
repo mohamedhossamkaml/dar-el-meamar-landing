@@ -60,8 +60,8 @@ const Hero: React.FC<HeroProps> = ({ images }) => {
                 <div>
                   <motion.span
                     className="text-teal-400"
-                    animate={{ scale: [1, 2, 1], opacity: [1.5, 0.3, 1.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
+                    animate={{ scale: [1, 1.9, 1], opacity: [1.5, 0.3, 1.5] }}
+                    transition={{ duration: 3, repeat: Infinity }}
                   >
                     {t.hero.titleHighlight}
                   </motion.span>{' '}
