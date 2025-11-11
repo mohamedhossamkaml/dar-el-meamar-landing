@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer } from '../../utils/animations';
-import { Building2 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import { PROJECTS_EXTRA } from '../../config/projectsExtra';
 import ProjectModal from './Modal/ProjectModal';
@@ -47,11 +46,6 @@ const GalleryProjects: React.FC = () => {
                   transition={{ type: "spring", stiffness: 220, damping: 24 }}
                   onContextMenu={(e) => e.preventDefault()}
                 />
-                <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full">
-                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    {project.year}
-                  </span>
-                </div>
               </div>
 
               {/* Content */}
@@ -63,11 +57,6 @@ const GalleryProjects: React.FC = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-3">{project.description}</p>
-                <div className="flex items-center text-sm text-gray-500 dark:text-gray-500 mb-4">
-                  <Building2 size={16} className="mr-2" />
-                  {project.location}
-                </div>
-
                 {/* Details Button */}
                 <button
                   onClick={() => setSelectedProject(project)}

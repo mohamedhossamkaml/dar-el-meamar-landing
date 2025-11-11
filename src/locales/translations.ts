@@ -221,7 +221,7 @@ export const translations = {
         {
           id: 2,
           title: 'Post - Modern Villa - Contemporary Living',
-          category: 'Commercial',
+          category: 'Residential',
           location: 'Business District, Cairo',
           year: '2025',
           description: 'Defined by dynamic, flowing curves giving the building a sculptural, artistic, and bold visual identity. The use of high-contrast palette of greys and beige colored stucco and integrated lighting design creates a luxurious look.',
@@ -229,10 +229,18 @@ export const translations = {
         {
           id: 3,
           title: 'Modern Villa - Contemporary Living',
-          category: 'Industrial',
+          category: 'Residential',
           location: '10th of Ramadan City',
           year: '2023',
           description: 'The villa`s exterior design is inspired by the modern architecture. The use of warm colored stucco combined with wooden accents creates a charming and timeless look. Large windows and glass doors are strategically placed to allow ample natural light to flood the interior spaces and provide beautiful views of the surrounding landscape.',
+        },
+        {
+          id: 4,
+          title: 'Minimalist Villa - Elegance in Simplicity',
+          category: 'Residential',
+          location: '10th of Ramadan City',
+          year: '2023',
+          description: 'Large openings bring in natural light while maintaining privacy, and the façade combines light colored stucco with dark marble cladding to enhance contrast and depth. The villa is designed with a minimalist architectural language, offering both elegance and simplicity.',
         },
       ],
       hover: {
@@ -608,7 +616,7 @@ export const translations = {
         {
           id: 2,
           title: 'فيلا ما بعد الحداثة - معيشة معاصرة',
-          category: 'تجاري',
+          category: 'سكني',
           location: 'منطقة الأعمال، القاهرة',
           year: '2025',
           description: 'يتميز المبنى بانحناءات ديناميكية وانسيابية، مما يمنحه هوية بصرية نحتية وفنية وجريئة. ويضفي استخدام لوحة ألوان متباينة من الجص الرمادي والبيج، بالإضافة إلى تصميم إضاءة متكامل، مظهرًا فاخرًا.',
@@ -616,10 +624,18 @@ export const translations = {
         {
           id: 3,
           title: 'فيلا عصرية - معيشة معاصرة' ,
-          category: 'صناعي',
+          category: 'سكني',
           location: 'مدينة العاشر من رمضان',
           year: '2023',
           description: 'تم استلهام التصميم الخارجي للفيلا من العمارة الحديثة. يخلق استخدام الجص ذي اللون الدافئ مع لمسات خشبية مظهرًا ساحرًا وخالدًا. تم وضع نوافذ وأبواب زجاجية كبيرة بشكل استراتيجي للسماح بدخول الضوء الطبيعي بكثرة إلى المساحات الداخلية وتوفير إطلالات جميلة على المناظر الطبيعية المحيطة.',
+        },
+        {
+          id: 4,
+          title:'فيلا بسيطة - الأناقة في البساطة',
+          category: 'سكني',
+          location: 'مدينة العاشر من رمضان',
+          year: '2023',
+          description: 'تُتيح الفتحات الكبيرة دخول الضوء الطبيعي مع الحفاظ على الخصوصية، وتجمع الواجهة بين الجص ذي الألوان الفاتحة والكسوة الرخامية الداكنة لتعزيز التباين والعمق. صُممت الفيلا بلغة معمارية بسيطة، تجمع بين الأناقة والبساطة.'
         },
       ],
       hover: {
