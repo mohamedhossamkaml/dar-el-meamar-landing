@@ -11,6 +11,13 @@
   direction: ltr;
 }
 
+/* Disable image dragging and text selection */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+
 /* Ensure smooth transitions when switching languages */
 * {
   transition-property: direction;

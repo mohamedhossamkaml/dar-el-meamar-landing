@@ -8,6 +8,7 @@ import {
 import { useLanguage } from '../context/LanguageContext';
 
 import logoImage from '../assets/darImg.png';
+import Logo from './Tools/Logo';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -25,12 +26,8 @@ const Footer = () => {
           variants={fadeInUp}
         >
           {/* Logo Image */}
-          <motion.img
-            src={logoImage}
-            alt="Dar El-Meamar"
-            className="h-36 w-auto mx-auto"
-            variants={scaleIn}
-          />
+          <Logo logoImage={logoImage} className="w-auto mx-auto" size="h-36" animation={scaleIn} />
+          {/* Description */}
           <motion.p
             className="text-gray-400"
             variants={fadeIn}

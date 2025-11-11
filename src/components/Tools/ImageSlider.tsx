@@ -66,17 +66,18 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.img
-          key={index} // مفتاح ثابت لكل صورة
+          key={index}
           src={images[index]}
           alt=""
           loading={index === 0 ? 'eager' : 'lazy'}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="absolute select-none  inset-0 w-full h-full object-cover pointer-events-none"
           style={{ zIndex: 0, willChange: 'opacity, transform' }}
           variants={variants}
           initial="enter"
           animate="center"
           exit="exit"
           transition={{ duration: transitionDuration, ease: 'easeInOut' }}
+          onContextMenu={(e) => e.preventDefault()}
         />
       </AnimatePresence>
 

@@ -41,10 +41,11 @@ const GalleryProjects: React.FC = () => {
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full select-none  object-cover"
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.06 }}
                   transition={{ type: "spring", stiffness: 220, damping: 24 }}
+                  onContextMenu={(e) => e.preventDefault()}
                 />
                 <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 px-3 py-1 rounded-full">
                   <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">

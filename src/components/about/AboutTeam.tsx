@@ -43,6 +43,7 @@ const AboutTeam: React.FC = () => {
                   <img
                     src={PERSON_IMAGES[index % PERSON_IMAGES.length] || member.image}
                     alt={member.name}
+                    onContextMenu={(e) => e.preventDefault()}
                     className="w-24 h-24 rounded-full object-cover border-4 border-teal-100 dark:border-teal-900" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{member.name}</h3>

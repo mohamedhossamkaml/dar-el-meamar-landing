@@ -40,7 +40,7 @@ const Contact = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-teal-600 dark:bg-teal-500 text-white px-8 py-3 rounded-lg font-semibold
-                         hover:bg-teal-700 dark:hover:bg-teal-600 transition-all shadow-lg"
+                        hover:bg-teal-700 dark:hover:bg-teal-600 transition-all shadow-lg"
             >
               {t.common.seeMore}
             </motion.button>
@@ -53,16 +53,7 @@ const Contact = () => {
             className="space-y-8"
             variants={fadeInLeft}
           >
-            {/* Phone */}
-            <motion.div className="flex items-start space-x-4 rtl:space-x-reverse" variants={fadeInUp}>
-              <div className="bg-teal-100 dark:bg-teal-900 p-3 rounded-lg">
-                <Phone className="text-teal-600 dark:text-teal-400" size={24} />
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">{t.contact.info.phone}</h3>
-                <p className="text-gray-600 dark:text-gray-400">+966 XX XXX XXXX</p>
-              </div>
-            </motion.div>
+
 
             {/* Email */}
             <motion.div className="flex items-start space-x-4 rtl:space-x-reverse" variants={fadeInUp}>
@@ -85,6 +76,18 @@ const Contact = () => {
                 <p className="text-gray-600 dark:text-gray-400">Cairo, Egypt</p>
               </div>
             </motion.div>
+
+            {/* Phone */}
+            <motion.div className="flex items-start space-x-4 rtl:space-x-reverse" variants={fadeInUp}>
+              <div className="bg-teal-100 dark:bg-teal-900 p-3 rounded-lg">
+                <Phone className="text-teal-600 dark:text-teal-400" size={24} />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">{t.contact.info.phone}</h3>
+                <p className="text-gray-600 dark:text-gray-400">+01507412000</p>
+                <p className="text-gray-600 dark:text-gray-400">+23131088</p>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Contact Form */}
@@ -94,8 +97,8 @@ const Contact = () => {
               <input
                 type="text"
                 className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3
-                           bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-                           focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+                          focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
             <div>
@@ -103,8 +106,8 @@ const Contact = () => {
               <input
                 type="email"
                 className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3
-                           bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-                           focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+                        focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
             <div>
@@ -112,15 +115,15 @@ const Contact = () => {
               <textarea
                 rows={4}
                 className="w-full border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-3
-                           bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
-                           focus:outline-none focus:ring-2 focus:ring-teal-500"
+                          bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100
+                          focus:outline-none focus:ring-2 focus:ring-teal-500"
               ></textarea>
             </div>
             <motion.button
               type="submit"
               variants={scaleIn}
               className="bg-teal-600 text-white px-8 py-4 rounded-lg hover:bg-teal-700 transition-all hover:shadow-lg font-medium text-lg
-                         dark:bg-teal-500 dark:text-gray-900 dark:hover:bg-teal-400"
+                        dark:bg-teal-500 dark:text-gray-900 dark:hover:bg-teal-400"
             >
               {t.contact.form.send}
             </motion.button>

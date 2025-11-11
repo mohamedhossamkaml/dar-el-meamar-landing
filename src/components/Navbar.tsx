@@ -13,6 +13,7 @@ import {
   staggerContainer,
   fadeInLeft
 } from '../utils/animations';
+import Logo from './Tools/Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,14 +69,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="flex justify-between items-center h-32" >
           {/* Logo */}
-          <Link to="/">
-            <motion.img
-              src={logoImage}
-              alt="Dar El-Meamar"
-              className="h-28 w-auto cursor-pointer hover:opacity-80 transition-opacity"
-              variants={fadeInLeft}
-            />
-          </Link>
+          <Logo logoImage={logoImage} size="h-28" animation={fadeInLeft} />
 
           {/* Desktop Menu */}
           <motion.div

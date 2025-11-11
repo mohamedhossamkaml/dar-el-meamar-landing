@@ -15,10 +15,10 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <div className="min-h-screen  bg-white dark:bg-gray-900  text-gray-900 dark:text-white transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-gray-900  text-gray-900 dark:text-white transition-colors duration-300">
         <Navbar />
         <SocialContact position="left" /> {/* Social icons on the left side */}
-        <div className="pt-32">
+        <div className="pt-32 ">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

@@ -23,9 +23,9 @@ const Services = () => {
   ]
 
   const galleryItems = imageUrls.map((url) => ({
-  image: url,
-  text: ''
-}));
+    image: url,
+    text: ''
+  }));
 
   return (
     <motion.section
@@ -104,12 +104,18 @@ const Services = () => {
         </motion.div>
 
         {/* Construction Types Image */}
-
-
         <motion.div
-          className='bg-gray-800/60 m-10'
-          style={{ height: '600px',}}>
-          <CircularGallery bend={2} items={galleryItems}  borderRadius={0.05}  scrollSpeed={2.3} scrollEase={0.02} />
+          onContextMenu={(e) => e.preventDefault()}
+          className='bg-gray-800/60 m-10 select-none pointer-events-none'
+          style={{ height: '600px', }}
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+
+
+        >
+          <CircularGallery bend={2} items={galleryItems} borderRadius={0.05} scrollSpeed={2.3} scrollEase={0.02} />
         </motion.div>
 
       </div>

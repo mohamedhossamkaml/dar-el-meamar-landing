@@ -1,0 +1,19 @@
+import React from 'react';
+import { X } from 'lucide-react';
+
+interface Props {
+  onClose: () => void;
+  label: string;
+}
+
+const CloseButton: React.FC<Props> = ({ onClose, label }) => (
+  <button
+    onClick={onClose}
+    className="bg-red-600 text-white rounded-md px-2 md:px-4 py-1 md:py-2 text-sm hover:bg-red-700 transition flex items-center gap-1"
+  >
+    <X size={16} />
+    {label}
+  </button>
+);
+
+export default CloseButton;

@@ -11,8 +11,8 @@ const ServicesTypesImage: React.FC = () => {
   ]
 
   const galleryItems = imageUrls.map((url) => ({
-  image: url,
-  text: ''
+    image: url,
+    text: ''
   }));
 
   return (
@@ -22,14 +22,12 @@ const ServicesTypesImage: React.FC = () => {
           <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-2 border-teal-100 dark:border-teal-900 p-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">{t.services.typesTitle}</h2>
 
-
-        {/* Construction Types Image */}
-
-
-        <motion.div
-          className='bg-gray-800/60 m-10'
-          style={{ height: '600px',}}>
-          <CircularGallery bend={2} items={galleryItems}  borderRadius={0.05}  scrollSpeed={2.3} scrollEase={0.02} />
+            {/* Construction Types Image */}
+            <motion.div
+              className='bg-gray-800/60 m-10 select-none pointer-events-none'
+              onContextMenu={(e) => e.preventDefault()}
+              style={{ height: '600px', }}>
+              <CircularGallery bend={2} items={galleryItems} borderRadius={0.05} scrollSpeed={2.3} scrollEase={0.02} />
             </motion.div>
 
           </div>
