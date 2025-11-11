@@ -14,7 +14,7 @@ const GalleryCTA: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t.galleryPage.cta.title}</h2>
           <p className="text-xl text-teal-100 mb-8">{t.galleryPage.cta.subtitle}</p>
           <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-white dark:bg-teal-500 text-teal-600 dark:text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all">
-            <Link to="/contact">
+            <Link to="/gallery">
               {t.galleryPage.cta.button}
             </Link>
           </motion.button>
