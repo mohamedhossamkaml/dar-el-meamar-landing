@@ -23,7 +23,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
       {project && (
         <motion.div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <motion.div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full p-6 relative flex flex-col">
-            {/* Header */}
+
             <div className="mb-2 flex items-center justify-between gap-2">
               <CategoryButtons
                 category={category}
@@ -38,7 +38,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
               />
             </div>
 
-            {/* Image Viewer */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={category}
@@ -51,7 +50,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Project Details */}
             <div className="flex items-center justify-between gap-4 mt-4">
               <ProjectDetails project={project} />
             </div>

@@ -4,6 +4,7 @@ interface Props {
   category: 'exterior' | 'entrance' | 'sales';
   setCategory: (c: 'exterior' | 'entrance' | 'sales') => void;
   setCurrentIndex: (i: number) => void;
+  onClose: () => void;
   t: any;
 }
 

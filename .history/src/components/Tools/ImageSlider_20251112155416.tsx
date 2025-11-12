@@ -70,10 +70,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
           src={images[index]}
           alt=""
           loading={index === 0 ? 'eager' : 'lazy'}
-          className="
-          absolute select-none  inset-0
-          w-full h-full object-cover
-          pointer-events-none"
+          className="absolute select-none  inset-0 w-full h-full object-cover pointer-events-none"
           style={{ zIndex: 0, willChange: 'opacity, transform' }}
           variants={variants}
           initial="enter"

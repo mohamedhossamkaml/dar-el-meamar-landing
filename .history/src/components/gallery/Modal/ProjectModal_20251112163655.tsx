@@ -32,8 +32,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
                 setCurrentIndex={setCurrentIndex}
               />
               <CloseButton
-                onClose={onClose}
-                label={t.galleryPage.modal.closeButton || 'Close'}
+                // onClose={onClose}
+                // label={t.galleryPage.modal.closeButton || 'Close'}
                 className="absolute top-2 right-2"
               />
             </div>

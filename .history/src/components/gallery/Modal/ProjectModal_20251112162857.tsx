@@ -23,14 +23,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
       {project && (
         <motion.div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <motion.div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full p-6 relative flex flex-col">
-            {/* Header */}
+
             <div className="mb-2 flex items-center justify-between gap-2">
+              {/* Category Buttons*/}
               <CategoryButtons
                 category={category}
                 setCategory={setCategory}
                 t={t}
                 setCurrentIndex={setCurrentIndex}
               />
+
+              {/* Close Button */}
               <CloseButton
                 onClose={onClose}
                 label={t.galleryPage.modal.closeButton || 'Close'}
@@ -39,23 +42,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
             </div>
 
             {/* Image Viewer */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ImageViewer images={images} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
-              </motion.div>
-            </AnimatePresence>
+            <ImageViewer images={images} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
 
             {/* Project Details */}
             <div className="flex items-center justify-between gap-4 mt-4">
               <ProjectDetails project={project} />
             </div>
           </motion.div>
+
         </motion.div>
       )}
     </AnimatePresence>
