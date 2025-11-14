@@ -18,10 +18,9 @@ const PROJECT_COLORS = [
 ];
 export const PROJECTS_EXTRA: Record<number, ProjectExtra> = GALLERY_IMAGES.reduce(
   (acc, img, index) => {
-    const key = index + 1;
-    acc[key] = {
+    acc[index + 1] = {
       main: img,
-      details: GALLERY_IMAGES_DETAILS[key],
+      details: GALLERY_IMAGES_DETAILS[index],
       color: PROJECT_COLORS[index] || 'from-gray-400 to-gray-600',
     };
     return acc;

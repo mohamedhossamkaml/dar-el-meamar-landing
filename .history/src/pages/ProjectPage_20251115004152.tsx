@@ -116,13 +116,7 @@ const ProjectPage: React.FC = () => {
           {/* Main image */}
           {projectData.mainImage ? (
             <div className="mb-6 rounded overflow-hidden shadow-lg cursor-zoom-in" onClick={() => openLightbox(projectData.mainImage)}>
-              <img
-                src={projectData.mainImage}
-                alt={projectData.title}
-                loading="lazy"
-                className="w-full h-screen object-cover"
-                onContextMenu={(e) => e.preventDefault()}
-              />
+              <img src={projectData.mainImage} alt={projectData.title} loading="lazy" className="w-full h-screen object-cover" />
             </div>
           ) : null}
 
@@ -148,7 +142,7 @@ const ProjectPage: React.FC = () => {
                         alt={`${projectData.title}-${section.category}-${i}`}
                         loading="lazy"
                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform"
-                        onContextMenu={(e) => e.preventDefault()}
+
                       />
                     </button>
                   ))}
@@ -173,7 +167,6 @@ const ProjectPage: React.FC = () => {
         onPrev={currentSectionImgs.length > 1 ? showPrev : undefined}
         onNext={currentSectionImgs.length > 1 ? showNext : undefined}
         showArrows={currentSectionImgs.length > 1}
-        key={projectData.id}
       />
     </>
   );

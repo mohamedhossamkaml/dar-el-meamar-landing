@@ -173,7 +173,6 @@ const ProjectPage: React.FC = () => {
         onPrev={currentSectionImgs.length > 1 ? showPrev : undefined}
         onNext={currentSectionImgs.length > 1 ? showNext : undefined}
         showArrows={currentSectionImgs.length > 1}
-        key={projectData.id}
       />
     </>
   );
