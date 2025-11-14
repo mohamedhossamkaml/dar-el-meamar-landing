@@ -1,14 +1,13 @@
-// src/components/gallery/GalleryProjects.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer } from '../../utils/animations';
 import { useLanguage } from '../../context/LanguageContext';
 import { PROJECTS_EXTRA } from '../../config/projectsExtra';
+import ProjectModal from './Modal/ProjectModal';
 
 const GalleryProjects: React.FC = () => {
   const { t } = useLanguage();
-  const navigate = useNavigate();
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   const projects = t.galleryPage.projects.map((proj: any) => ({
     ...proj,
@@ -35,11 +34,13 @@ const GalleryProjects: React.FC = () => {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden border border-gray-100 dark:border-gray-700"
             >
+
+              {/* Image */}
               <div className={`relative h-64 bg-gradient-to-br ${project.color} overflow-hidden`}>
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full select-none object-cover"
+                  className="w-full h-full select-none  object-cover"
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.06 }}
                   transition={{ type: "spring", stiffness: 220, damping: 24 }}
@@ -47,6 +48,7 @@ const GalleryProjects: React.FC = () => {
                 />
               </div>
 
+              {/* Content */}
               <div className="p-6">
                 <div className="inline-block bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300 px-3 py-1 rounded-full text-sm mb-3">
                   {project.category}
@@ -54,9 +56,10 @@ const GalleryProjects: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   {project.title}
                 </h3>
-                {/* Navigate to project page */}
+                <p className="text-gray-600 dark:text-gray-400 mb-3">{project.description}</p>
+                {/* Details Button */}
                 <button
-                  onClick={() => navigate(`/projects/${project.id}`)}
+                  onClick={() => setSelectedProject(project)}
                   className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors"
                 >
                   {t.galleryPage.detailsButton}
@@ -66,6 +69,9 @@ const GalleryProjects: React.FC = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Modal */}
+      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} t={t} />
     </section>
   );
 };

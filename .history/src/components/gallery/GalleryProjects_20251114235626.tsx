@@ -54,6 +54,8 @@ const GalleryProjects: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   {project.title}
                 </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">{project.description}</p>
+
                 {/* Navigate to project page */}
                 <button
                   onClick={() => navigate(`/projects/${project.id}`)}

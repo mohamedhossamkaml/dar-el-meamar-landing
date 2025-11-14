@@ -10,7 +10,6 @@ import GalleryPage from './pages/GalleryPage';
 import WorksPage from './pages/WorksPage';
 import Contact from './components/Contact';
 import SocialContact from './components/SocialContact/SocialContact';
-import ProjectPage from './pages/ProjectPage';
 
 function App() {
   return (
@@ -25,6 +24,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/gallery" element={<GalleryProjects />} />
             <Route path="/projects/:id" element={<ProjectPage />} />
             <Route path="/works" element={<WorksPage />} />
             <Route path="/contact" element={<Contact />} />
