@@ -11,7 +11,7 @@ const PROJECT_COLORS = [
 
 export const PROJECTS_EXTRA: Record<number, ProjectExtra> = HERO_IMAGES.reduce(
   (acc, img, index) => {
-    const key = index ;
+    const key = index + 1;
     acc[key] = {
       main: img,
       details: PROJECTS[key],

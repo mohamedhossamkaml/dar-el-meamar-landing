@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer } from '../../utils/animations';
 import { useLanguage } from '../../context/LanguageContext';
 import { PROJECTS_EXTRA } from '../../config/projectsExtra';
-import { GALLERY_IMAGES } from '../../config/imagesConfig';
 
 const GalleryProjects: React.FC = () => {
   const { t } = useLanguage();

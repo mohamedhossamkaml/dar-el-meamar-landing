@@ -216,7 +216,7 @@ export const translations = {
           category: 'Residential',
           location: 'New Cairo, Egypt',
           year: '2025',
-          description: "This project represents a modern villa that clean geometry, natural textures, and functional design to create a timeless residential space. The composition focuses on strong vertical and horizontal lines, balanced proportions, and seamless integration with the surrounding landscape.Large openings bring in natural light while maintaining privacy, and the façade combines light colored stucco with dark marble cladding to enhance contrast and depth. The villa is designed with a minimalist architectural language, offering both elegance and simplicity.",
+          description: "This project represents a modern villa that clean geometry, natural textures, and functional design to create a timeless residential space. The composition focuses on strong vertical and horizontal lines, balanced proportions, and seamless integration with the surrounding landscape.",
         },
         {
           id: 2,
@@ -236,7 +236,7 @@ export const translations = {
         },
         {
           id: 4,
-          title: 'Contemporary - Modern Villa - Elegance in Simplicity',
+          title: 'Minimalist Villa - Elegance in Simplicity',
           category: 'Residential',
           location: '10th of Ramadan City',
           year: '2023',
@@ -622,7 +622,7 @@ export const translations = {
           category: 'سكني',
           location: 'القاهرة الجديدة، مصر',
           year: '2024',
-          description:'يُجسّد هذا المشروع فيلا عصرية بهندسة أنيقة، وقوام طبيعي، وتصميم عملي، لخلق مساحة سكنية خالدة. يُركّز تصميم الفيلا على خطوط عمودية وأفقية قوية، ونسب متوازنة، وتكامل سلس مع المناظر الطبيعية المحيطة. تُتيح الفتحات الكبيرة دخول الضوء الطبيعي مع الحفاظ على الخصوصية، وتجمع الواجهة بين الجص ذي الألوان الفاتحة والكسوة الرخامية الداكنة لتعزيز التباين والعمق. صُممت الفيلا بلغة معمارية بسيطة، تجمع بين الأناقة والبساطة.'
+          description: 'يمثل هذا المشروع فيلا عصرية تجمع بين الهندسة النظيفة، والمواد الطبيعية، والتصميم الوظيفي لخلق مساحة سكنية خالدة. يركز التكوين على خطوط رأسية وأفقية قوية، ونسب متوازنة، وتكامل سلس مع المناظر الطبيعية المحيطة.',
         },
         {
           id: 2,
@@ -642,12 +642,12 @@ export const translations = {
         },
         {
           id: 4,
-          title:'فيلا معاصرة - حديثة - الأناقة في البساطة',
+          title:'فيلا بسيطة - الأناقة في البساطة',
           category: 'سكني',
           location: 'مدينة العاشر من رمضان',
           year: '2023',
-          description: 'يتميز هذا المشروع بخطوطه الأنيقة وأشكاله الهندسية وتفاصيله البسيطة. يتميز بألوانه الفاتحة والمحايدة التي تتباين مع الكسوة الحجرية للحفاظ على مظهر جمالي أنيق ومرتب. استخدام مدروس للنوافذ الكبيرة والشرفات ذات القضبان الزجاجية لتحقيق أقصى استفادة من الضوء الطبيعي والمنظر الطبيعي، مما يعزز تصميم الواجهة المفتوحة.'
-        }
+          description: 'تُتيح الفتحات الكبيرة دخول الضوء الطبيعي مع الحفاظ على الخصوصية، وتجمع الواجهة بين الجص ذي الألوان الفاتحة والكسوة الرخامية الداكنة لتعزيز التباين والعمق. صُممت الفيلا بلغة معمارية بسيطة، تجمع بين الأناقة والبساطة.'
+        },
       ],
       hover: {
         title: 'عرض المشروع',
