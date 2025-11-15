@@ -667,18 +667,6 @@ export const translations = {
       },
       detailsButton: 'عرض التفاصيل',
     },
-    // Project Page (detailed) - Arabic
-    projectPage: {
-      projectNotFound: 'المشروع غير موجود.',
-      backToGallery: 'العودة إلى المعرض',
-      noImages: 'لا توجد صور تفصيلية متاحة.',
-      images: 'الصور',
-      category: {
-        exterior: 'صور الخارجية',
-        entrance: 'صور الدخول',
-        sales: 'خطط البيع',
-      }
-    },
     // Works Section
     works: {
       title: 'إنجازاتنا',

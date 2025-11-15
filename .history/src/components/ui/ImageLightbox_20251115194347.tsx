@@ -78,7 +78,7 @@ export default function ImageLightbox({ open, src, alt = '', onClose, onPrev, on
               aria-label="Close"
               className="absolute right-2 top-2 z-20 p-2 rounded-full bg-red-500  text-white hover:bg-red-600"
             >
-              <X size={24} />
+              <X size={15} />
             </button>
           </motion.div>
         </motion.div>

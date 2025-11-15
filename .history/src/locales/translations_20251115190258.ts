@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     // Common
@@ -262,16 +261,8 @@ export const translations = {
       detailsButton: 'View Details',
     },
     // Project Page (detailed)
-    projectPage: {
-      projectNotFound: 'Project not found.',
-      backToGallery: 'Back to Gallery',
-      noImages: 'No detailed images available.',
-      images: 'Images',
-      category: {
-        exterior: 'Exterior shots',
-        entrance: 'Entrance',
-        sales: 'Sales plans',
-      }
+    ProjectPage: {
+
     },
     // Works Section
     works: {
@@ -666,18 +657,6 @@ export const translations = {
         sales: 'خطط البيع',
       },
       detailsButton: 'عرض التفاصيل',
-    },
-    // Project Page (detailed) - Arabic
-    projectPage: {
-      projectNotFound: 'المشروع غير موجود.',
-      backToGallery: 'العودة إلى المعرض',
-      noImages: 'لا توجد صور تفصيلية متاحة.',
-      images: 'الصور',
-      category: {
-        exterior: 'صور الخارجية',
-        entrance: 'صور الدخول',
-        sales: 'خطط البيع',
-      }
     },
     // Works Section
     works: {

@@ -265,13 +265,14 @@ export const translations = {
     projectPage: {
       projectNotFound: 'Project not found.',
       backToGallery: 'Back to Gallery',
-      noImages: 'No detailed images available.',
-      images: 'Images',
-      category: {
-        exterior: 'Exterior shots',
-        entrance: 'Entrance',
-        sales: 'Sales plans',
-      }
+      hero: {
+        subtitle: 'Discover the Future of Construction',
+      },
+      cta: {
+        title: 'Ready to Start Your Project?',
+        subtitle: "Let's bring your vision to life with our expertise and dedication",
+        button: 'Contact Us Today',
+      },
     },
     // Works Section
     works: {
@@ -666,18 +667,6 @@ export const translations = {
         sales: 'خطط البيع',
       },
       detailsButton: 'عرض التفاصيل',
-    },
-    // Project Page (detailed) - Arabic
-    projectPage: {
-      projectNotFound: 'المشروع غير موجود.',
-      backToGallery: 'العودة إلى المعرض',
-      noImages: 'لا توجد صور تفصيلية متاحة.',
-      images: 'الصور',
-      category: {
-        exterior: 'صور الخارجية',
-        entrance: 'صور الدخول',
-        sales: 'خطط البيع',
-      }
     },
     // Works Section
     works: {

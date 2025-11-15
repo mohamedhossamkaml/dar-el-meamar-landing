@@ -131,10 +131,7 @@ const ProjectPage: React.FC = () => {
             projectData.grouped.map((section) => (
               <section key={section.category} className="mb-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold capitalize">
-                    {t.projectPage?.category?.[section.category as keyof typeof t.projectPage.category] || section.category}
-                  </h2>
-
+                  <h2 className="text-xl font-semibold capitalize">{section.category} {t.projectPage?.category.entrance || 'Entrance'}</h2>
                   <div className="text-sm text-gray-500">{section.imgs.length} {t.projectPage?.images || 'images'}</div>
                 </div>
 
@@ -168,7 +165,6 @@ const ProjectPage: React.FC = () => {
         </div>
       </motion.main>
 
-      {/* Lightbox */}
       <ImageLightbox
         open={lightboxOpen}
         src={lightboxSrc}

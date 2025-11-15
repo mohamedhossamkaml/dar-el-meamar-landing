@@ -88,9 +88,9 @@ const ProjectPage: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="mb-4">{t.projectPage?.projectNotFound || 'Project not found'}</p>
+          <p className="mb-4">{t.projectPage?.projectNotfound || 'Project not found'}</p>
           <button onClick={() => navigate(-1)} className="px-4 py-2 bg-gray-200 rounded">
-            {t.projectPage?.backToGallery || 'Back to Gallery'}
+            Go back
           </button>
         </div>
       </div>
@@ -102,7 +102,7 @@ const ProjectPage: React.FC = () => {
       <motion.main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-12">
         <div className="max-w-5xl mx-auto px-4">
           <button onClick={() => navigate(-1)} className="mb-6 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800">
-            {t.projectPage?.backToGallery || 'Back to Gallery'}
+            Back
           </button>
 
           <h1 className="text-3xl font-bold mb-4">{projectData.title}</h1>
@@ -131,11 +131,8 @@ const ProjectPage: React.FC = () => {
             projectData.grouped.map((section) => (
               <section key={section.category} className="mb-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold capitalize">
-                    {t.projectPage?.category?.[section.category as keyof typeof t.projectPage.category] || section.category}
-                  </h2>
-
-                  <div className="text-sm text-gray-500">{section.imgs.length} {t.projectPage?.images || 'images'}</div>
+                  <h2 className="text-xl font-semibold capitalize">{section.category}</h2>
+                  <div className="text-sm text-gray-500">{section.imgs.length} images</div>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
@@ -159,7 +156,7 @@ const ProjectPage: React.FC = () => {
               </section>
             ))
           ) : (
-            <p className="text-gray-500">{t.projectPage?.noImages || 'No images available'}</p>
+            <p className="text-gray-500">No detailed images available.</p>
           )}
 
           <div className="mt-8">
@@ -168,7 +165,6 @@ const ProjectPage: React.FC = () => {
         </div>
       </motion.main>
 
-      {/* Lightbox */}
       <ImageLightbox
         open={lightboxOpen}
         src={lightboxSrc}

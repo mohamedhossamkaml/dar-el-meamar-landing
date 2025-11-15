@@ -111,7 +111,7 @@ const ProjectPage: React.FC = () => {
               {projectData.category}
             </div>
           )}
-          <p className="text-gray-600 dark:text-gray-400 mb-6">{projectData.description}</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">{projectData.description} safsafa</p>
 
           {/* Main image */}
           {projectData.mainImage ? (
@@ -131,11 +131,8 @@ const ProjectPage: React.FC = () => {
             projectData.grouped.map((section) => (
               <section key={section.category} className="mb-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold capitalize">
-                    {t.projectPage?.category?.[section.category as keyof typeof t.projectPage.category] || section.category}
-                  </h2>
-
-                  <div className="text-sm text-gray-500">{section.imgs.length} {t.projectPage?.images || 'images'}</div>
+                  <h2 className="text-xl font-semibold capitalize">{section.category}</h2>
+                  <div className="text-sm text-gray-500">{section.imgs.length} images</div>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
@@ -168,7 +165,6 @@ const ProjectPage: React.FC = () => {
         </div>
       </motion.main>
 
-      {/* Lightbox */}
       <ImageLightbox
         open={lightboxOpen}
         src={lightboxSrc}
