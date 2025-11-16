@@ -7,8 +7,7 @@ import GALLERY_IMAGES_DETAILS from '../config/gallery';
 import SeeMoreButton from '../components/Tools/Buttons/SeeMoreButton';
 import ImageLightbox from '../components/ui/ImageLightbox';
 import NotFoundPage from './NotFoundPage';
-import useLightbox from '../hooks/useLightbox';
-
+import useLightbox from '../hooks/useLightbox'; // 👈 hook جديد
 
 const ProjectPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();

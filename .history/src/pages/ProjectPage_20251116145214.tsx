@@ -7,7 +7,6 @@ import GALLERY_IMAGES_DETAILS from '../config/gallery';
 import SeeMoreButton from '../components/Tools/Buttons/SeeMoreButton';
 import ImageLightbox from '../components/ui/ImageLightbox';
 import NotFoundPage from './NotFoundPage';
-import useLightbox from '../hooks/useLightbox';
 
 
 const ProjectPage: React.FC = () => {
