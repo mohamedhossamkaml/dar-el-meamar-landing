@@ -25,7 +25,6 @@ const ProjectPage: React.FC = () => {
     setLightboxOpen(true);
   }, []);
 
-  // Close lightbox handler
   const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
     setLightboxSrc(null);
@@ -33,7 +32,6 @@ const ProjectPage: React.FC = () => {
     setCurrentIndex(0);
   }, []);
 
-  // Show previous image in lightbox
   const showPrev = useCallback(() => {
     setCurrentIndex((i) => {
       const next = (i - 1 + currentSectionImgs.length) % currentSectionImgs.length;
@@ -42,7 +40,6 @@ const ProjectPage: React.FC = () => {
     });
   }, [currentSectionImgs]);
 
-  // Show next image in lightbox
   const showNext = useCallback(() => {
     setCurrentIndex((i) => {
       const next = (i + 1) % currentSectionImgs.length;
@@ -51,29 +48,28 @@ const ProjectPage: React.FC = () => {
     });
   }, [currentSectionImgs]);
 
-  // Fetch project data based on ID
   const projectData = useMemo(() => {
     const idx = Number(id);
     if (Number.isNaN(idx)) return null;
 
-    // Find project from translations
+    // تحقق إن المشروع موجود في الترجمة
     const projFromT = (t.galleryPage?.projects ?? []).find((p: any) => Number(p.id) === idx) ?? null;
 
-    // Find details from gallery config
+    // تحقق إن الصور موجودة
     const detailsByCategory = GALLERY_IMAGES_DETAILS[idx] ?? null;
 
-    // If either is missing, return null
+    // لو المشروع مش موجود → null
     if (!projFromT || !detailsByCategory) {
       return null;
     }
-    // Helper to get first image from a category
+
     const firstFromCategory = (arr?: string[]) => (arr && arr.length ? arr[0] : '');
-    // Get main image
+
     const mainImage =
       firstFromCategory(detailsByCategory?.exterior) ||
       (detailsByCategory ? Object.values(detailsByCategory).flatMap((a: string[]) => a)[0] : '') ||
       '';
-    // Group details by category
+
     const grouped =
       detailsByCategory != null
         ? Object.entries(detailsByCategory).map(([category, imgs]) => ({ category, imgs }))
@@ -90,7 +86,7 @@ const ProjectPage: React.FC = () => {
     };
   }, [id, t]);
 
-  // If no project data found, show NotFoundPage
+  // لو المشروع مش موجود → NotFoundPage
   if (!projectData) {
     return <NotFoundPage />;
   }

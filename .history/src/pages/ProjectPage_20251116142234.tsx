@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import GALLERY_IMAGES_DETAILS from '../config/gallery';
+import { PROJECTS_EXTRA } from '../config/projectsExtra';
 import SeeMoreButton from '../components/Tools/Buttons/SeeMoreButton';
 import ImageLightbox from '../components/ui/ImageLightbox';
 import NotFoundPage from './NotFoundPage';
@@ -25,7 +26,6 @@ const ProjectPage: React.FC = () => {
     setLightboxOpen(true);
   }, []);
 
-  // Close lightbox handler
   const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
     setLightboxSrc(null);
@@ -33,7 +33,6 @@ const ProjectPage: React.FC = () => {
     setCurrentIndex(0);
   }, []);
 
-  // Show previous image in lightbox
   const showPrev = useCallback(() => {
     setCurrentIndex((i) => {
       const next = (i - 1 + currentSectionImgs.length) % currentSectionImgs.length;
@@ -42,7 +41,6 @@ const ProjectPage: React.FC = () => {
     });
   }, [currentSectionImgs]);
 
-  // Show next image in lightbox
   const showNext = useCallback(() => {
     setCurrentIndex((i) => {
       const next = (i + 1) % currentSectionImgs.length;
@@ -51,58 +49,64 @@ const ProjectPage: React.FC = () => {
     });
   }, [currentSectionImgs]);
 
-  // Fetch project data based on ID
   const projectData = useMemo(() => {
     const idx = Number(id);
     if (Number.isNaN(idx)) return null;
 
-    // Find project from translations
-    const projFromT = (t.galleryPage?.projects ?? []).find((p: any) => Number(p.id) === idx) ?? null;
+    const projFromT =
+      (t.galleryPage?.projects ?? []).find((p: any) => Number(p.id) === idx) ??
+      (t.galleryPage?.projects ?? [])[idx] ??
+      null;
 
-    // Find details from gallery config
     const detailsByCategory = GALLERY_IMAGES_DETAILS[idx] ?? null;
+    const extra = PROJECTS_EXTRA?.[idx + 1];
 
-    // If either is missing, return null
-    if (!projFromT || !detailsByCategory) {
-      return null;
-    }
-    // Helper to get first image from a category
     const firstFromCategory = (arr?: string[]) => (arr && arr.length ? arr[0] : '');
-    // Get main image
+
     const mainImage =
       firstFromCategory(detailsByCategory?.exterior) ||
       (detailsByCategory ? Object.values(detailsByCategory).flatMap((a: string[]) => a)[0] : '') ||
+      extra?.main ||
       '';
-    // Group details by category
+
     const grouped =
       detailsByCategory != null
         ? Object.entries(detailsByCategory).map(([category, imgs]) => ({ category, imgs }))
         : [];
 
     return {
-      id: projFromT.id,
-      title: projFromT.title,
-      description: projFromT.description,
-      category: projFromT.category,
+      id: projFromT?.id ?? idx,
+      title: projFromT?.title ?? `Project ${idx + 1}`,
+      description: projFromT?.description ?? '',
+      category: projFromT?.category ?? '',
       mainImage,
       grouped,
-      raw: projFromT,
+      raw: projFromT ?? null,
     };
   }, [id, t]);
 
-  // If no project data found, show NotFoundPage
   if (!projectData) {
     return <NotFoundPage />;
+  }
+
+  if (!projectData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="mb-4">{t.projectPage?.projectNotFound || 'Project not found'}</p>
+          <button onClick={() => navigate(-1)} className="px-4 py-2 bg-gray-200 rounded">
+            {t.projectPage?.backToGallery || 'Back to Gallery'}
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
     <>
       <motion.main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-12">
         <div className="max-w-5xl mx-auto px-4">
-          <button
-            onClick={() => navigate(-1)}
-            className="mb-6 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800"
-          >
+          <button onClick={() => navigate(-1)} className="mb-6 px-3 py-1 rounded bg-gray-200 dark:bg-gray-800">
             {t.projectPage?.backToGallery || 'Back to Gallery'}
           </button>
 
@@ -116,10 +120,7 @@ const ProjectPage: React.FC = () => {
 
           {/* Main image */}
           {projectData.mainImage ? (
-            <div
-              className="mb-6 rounded overflow-hidden shadow-lg cursor-zoom-in"
-              onClick={() => openLightbox(projectData.mainImage)}
-            >
+            <div className="mb-6 rounded overflow-hidden shadow-lg cursor-zoom-in" onClick={() => openLightbox(projectData.mainImage)}>
               <img
                 src={projectData.mainImage}
                 alt={projectData.title}
@@ -136,12 +137,10 @@ const ProjectPage: React.FC = () => {
               <section key={section.category} className="mb-8">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-semibold capitalize">
-                    {t.projectPage?.category?.[section.category as keyof typeof t.projectPage.category] ||
-                      section.category}
+                    {t.projectPage?.category?.[section.category as keyof typeof t.projectPage.category] || section.category}
                   </h2>
-                  <div className="text-sm text-gray-500">
-                    {section.imgs.length} {t.projectPage?.images || 'images'}
-                  </div>
+
+                  <div className="text-sm text-gray-500">{section.imgs.length} {t.projectPage?.images || 'images'}</div>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
