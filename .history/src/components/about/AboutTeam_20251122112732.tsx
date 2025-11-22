@@ -17,9 +17,6 @@ const AboutTeam: React.FC = () => {
   return (
     <section className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full h-px bg-red-900 mb-10">
-          <p className="text-center text-3xl text-red-900 font-bold">Hide or delete</p>
-        </div>
         {/* Title */}
         <motion.div
           className="text-center mb-16"
@@ -35,7 +32,6 @@ const AboutTeam: React.FC = () => {
             {t.aboutPage.team.subtitle}
           </p>
         </motion.div>
-
 
         {/* Members */}
         <motion.div

@@ -16,9 +16,6 @@ const WorksTestimonials: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-teal-600 to-teal-800 dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full h-px bg-red-900 mb-10">
-          <p className="text-center text-3xl text-red-900 font-bold">Hide or delete</p>
-        </div>
         {/* Heading */}
         <motion.div
           className="text-center mb-16"

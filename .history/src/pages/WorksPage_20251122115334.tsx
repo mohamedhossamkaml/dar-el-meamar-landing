@@ -12,8 +12,8 @@ const WorksPage: React.FC = () => {
       <WorksAchievements />
       <WorksCapabilities />
       <WorksAwards />
-      <WorksCertifications />
-      <WorksTestimonials />
+      {/* <WorksCertifications /> */}
+      {/* <WorksTestimonials /> */}
     </div>
   );
 };

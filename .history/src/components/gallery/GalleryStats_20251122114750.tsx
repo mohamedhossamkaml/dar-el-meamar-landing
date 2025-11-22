@@ -21,9 +21,9 @@ const GalleryStats: React.FC = () => {
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* لو مش محتاج الجزء ده احذفه */}
-        <div className="w-full h-px bg-red-900 mb-10">
+        {/* <div className="w-full h-px bg-red-900 mb-10">
           <p className="text-center text-3xl text-red-900 font-bold">Hide or delete</p>
-        </div>
+        </div> */}
 
         {/* عرض الـ StatsGrid */}
         <StatsGrid stats={gridStats} />

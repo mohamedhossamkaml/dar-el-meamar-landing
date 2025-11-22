@@ -1,24 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { scaleIn, staggerContainer } from '../../utils/animations';
-import { Star } from 'lucide-react';
+import { Star, Award, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+
+const certIcons = [Star, Award, ShieldCheck];
 
 const WorksCertifications: React.FC = () => {
   const { t } = useLanguage();
-
-  // لو جاية كـ object نحولها Array
-  const certificationsRaw = t?.worksPage?.certifications ?? {};
-  const certificationsFromT = Array.isArray(certificationsRaw)
-    ? certificationsRaw
-    : Object.values(certificationsRaw);
+  const certificationsFromT = t.worksPage?.certifications || [];
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full h-px bg-red-900 mb-10">
-          <p className="text-center text-3xl text-red-900 font-bold">Hide or delete</p>
-        </div>
         {/* Heading */}
         <motion.div
           className="text-center mb-16"
@@ -43,21 +37,25 @@ const WorksCertifications: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {certificationsFromT.map((cert: any, index: number) => (
-            <motion.div
-              key={index}
-              variants={scaleIn}
-              className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-all"
-            >
-              <div className="bg-teal-100 dark:bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="text-teal-600 dark:text-teal-400" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                {cert.name}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">{cert.description}</p>
-            </motion.div>
-          ))}
+          {certificationsFromT.map((cert: any, index: number) => {
+            const Icon = certIcons[index] || Star;
+            return (
+              <motion.div
+                key={index}
+                variants={scaleIn}
+                className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg text-center
+                           hover:shadow-xl hover:translate-y-1 transition-all"
+              >
+                <div className="bg-teal-100 dark:bg-teal-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon className="text-teal-600 dark:text-teal-400" size={32} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  {cert.name}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">{cert.description}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
