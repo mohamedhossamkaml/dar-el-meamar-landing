@@ -22,7 +22,7 @@ const ServicesTypesImage: React.FC = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}>
           <div className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-2xl overflow-hidden border-2 border-teal-100 dark:border-teal-900 p-8">
             <div className="w-full h-px bg-red-900 mb-10">
-              <p className="text-center text-3xl text-red-900 font-bold">Hide or delete</p>
+              <p className="text-center text-3xl text-red-900 font-bold"> delete</p>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8">{t.services.typesTitle}</h2>
 

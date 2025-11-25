@@ -42,7 +42,7 @@ export const defaultIcons: SocialIcon[] = [
   },
   {
     href: "https://www.tiktok.com/@darelmeamar?lang=en",
-    bg: "bg-black hover:bg-gray-800",
+    bg: "bg-black hover:bg-gray-900",
     icon: <FaTiktok size={20} />,
     label: "TikTok",
   },

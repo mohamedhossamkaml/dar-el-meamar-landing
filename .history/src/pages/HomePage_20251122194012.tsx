@@ -9,14 +9,14 @@ import { Suspense } from 'react';
 const HomePage = () => {
   return (
     <>
-      <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
-        <Hero />
-        <About />
-        <Services />
-        <Gallery />
-        <Works />
-        <Contact />
-      </Suspense >
+      <Suspense fallback={<div className="text-center py-20">Loading...</div>}></Suspense>
+      <Hero />
+      <About />
+      <Services />
+      <Gallery />
+      <Works />
+      <Contact />
+    </Suspense >
     </>
   );
 };

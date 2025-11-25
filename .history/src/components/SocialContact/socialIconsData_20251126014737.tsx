@@ -4,7 +4,6 @@ import {
   FaWhatsapp,
   FaInstagram,
   FaPhoneAlt,
-  FaTiktok,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -23,7 +22,7 @@ export const defaultIcons: SocialIcon[] = [
     label: "Facebook",
   },
   {
-    href: "https://x.com/darelmeamar",
+    href: "https://x.com",
     bg: "bg-black hover:bg-gray-900",
     icon: <FaXTwitter size={20} />,
     label: "X (Twitter)",
@@ -39,12 +38,6 @@ export const defaultIcons: SocialIcon[] = [
     bg: "bg-pink-500 hover:bg-pink-600",
     icon: <FaInstagram size={20} />,
     label: "Instagram",
-  },
-  {
-    href: "https://www.tiktok.com/@darelmeamar?lang=en",
-    bg: "bg-black hover:bg-gray-800",
-    icon: <FaTiktok size={20} />,
-    label: "TikTok",
   },
   {
     href: "https://wa.me/201507412000",

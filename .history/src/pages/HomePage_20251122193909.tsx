@@ -4,19 +4,17 @@ import Services from '../components/Services';
 import Gallery from '../components/Gallery';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
-import { Suspense } from 'react';
 
 const HomePage = () => {
   return (
     <>
-      <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
-        <Hero />
-        <About />
-        <Services />
-        <Gallery />
-        <Works />
-        <Contact />
-      </Suspense >
+      <Suspense fallback={<div className="text-center py-20">Loading...</div>}></Suspense>
+      <Hero />
+      <About />
+      <Services />
+      <Gallery />
+      <Works />
+      <Contact />
     </>
   );
 };
