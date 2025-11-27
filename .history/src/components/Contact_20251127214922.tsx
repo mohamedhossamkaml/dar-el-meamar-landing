@@ -86,6 +86,10 @@ const Contact = () => {
                 <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">{t.contact.info.phone}</h3>
                 <p className="text-gray-600 dark:text-gray-400">+01507412000</p>
               </div>
+              <div>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">{t.contact.info.phone}</h3>
+                <p className="text-gray-600 dark:text-gray-400">+01507412000</p>
+              </div>
             </motion.div>
             <motion.div className="flex items-start space-x-4 rtl:space-x-reverse" variants={fadeInUp}>
               <div className="bg-teal-100 dark:bg-teal-900 p-3 rounded-lg">
@@ -93,9 +97,14 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">{t.contact.info.phone}</h3>
-                <p className="text-gray-600 dark:text-gray-400">+23131088</p>
+                <p className="text-gray-600 dark:text-gray-400">+01507412000</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-1">{t.contact.info.phone}</h3>
+                <p className="text-gray-600 dark:text-gray-400">+01507412000</p>
               </div>
             </motion.div>
+            <p className="text-gray-600 dark:text-gray-400">+23131088</p>
           </motion.div>
 
           {/* Contact Form */}
