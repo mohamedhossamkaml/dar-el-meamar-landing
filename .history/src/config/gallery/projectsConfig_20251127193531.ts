@@ -22,9 +22,9 @@ export const PROJECTS: Record<number, GalleryCategory> = {
     sales: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 14/4- Sales plans/*.{jpg,png}', { eager: true })),
   },
   4: {
-    exterior: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 138/2- Exterior shots/*.{jpg,png}', { eager: true })),
+    exterior: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 138/2- Exterior shots shots/*.{jpg,png}', { eager: true })),
     // entrance: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 138/3- Entrance/*.{jpg,png}', { eager: true })),//entrance Not available
-    sales: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 138/3- sales plans/*.{jpg,png}', { eager: true })),
+    sales: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 138/3- sales plans *.{jpg,png}', { eager: true })),
   },
   5: {
     exterior: toArray(import.meta.glob('../../assets/img/projectsImg/Villa 214/2- Exterior shots/*.{jpg,png}', { eager: true })),

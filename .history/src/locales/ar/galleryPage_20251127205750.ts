@@ -64,7 +64,7 @@ export const galleryPage = {
     project6:
     {
       id: 6,
-      title: 'فيلا معاصرة - حديثة',
+      title: 'فيلا حديثة',
       category: 'سكني',
       location: 'مدينة العاشر من رمضان',
       year: '2023',

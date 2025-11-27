@@ -5,15 +5,14 @@ interface Props {
   setCategory: (c: 'exterior' | 'entrance' | 'sales') => void;
   setCurrentIndex: (i: number) => void;
   t: any;
-  availableCategories: ('exterior' | 'entrance' | 'sales')[];
 }
 
-const CategoryButtons: React.FC<Props> = ({ category, setCategory, setCurrentIndex, t, availableCategories }) => (
+const CategoryButtons: React.FC<Props> = ({ category, setCategory, setCurrentIndex, t }) => (
   <div className="flex gap-2">
-    {availableCategories.map((key) => (
+    {['exterior', 'entrance', 'sales'].map((key) => (
       <button
         key={key}
-        onClick={() => { setCategory(key); setCurrentIndex(0); }}
+        onClick={() => { setCategory(key as any); setCurrentIndex(0); }}
         className={`px-3 py-1 rounded transition-all duration-300 font-medium
           ${category === key
             ? 'bg-teal-600 text-white shadow-md'

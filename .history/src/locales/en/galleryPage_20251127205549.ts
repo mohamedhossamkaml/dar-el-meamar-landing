@@ -61,7 +61,7 @@ export const galleryPage = {
     },
     project6: {
       id: 6,
-      title: 'Contemporary - Modern Villa ',
+      title: 'Contemporary - Modern Villa - Elegance in Simplicity',
       category: 'Residential',
       location: '10th of Ramadan City',
       year: '2023',

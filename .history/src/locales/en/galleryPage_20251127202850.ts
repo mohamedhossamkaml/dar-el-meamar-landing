@@ -52,21 +52,21 @@ export const galleryPage = {
     },
     project5: {
       id: 5,
-      title: 'Modern Villa',
+      title: 'Contemporary - Modern Villa - Elegance in Simplicity',
       category: 'Residential',
       location: '10th of Ramadan City',
       year: '2023',
       description:
-        'The exterior design is inspired by the modern architecture. The use of warm colored stucco combined with marble cladding creates a charming and timeless look. Large windows and glass doors are strategically placed to allow ample natural light to flood the interior spaces and provide beautiful views of the surrounding landscape.'
+        'This project is characterized by clean lines, geometric forms and minimalist detailing. Features a light, neutral color palette contrasted with stone cladding to maintain a clean, uncluttered aesthetic look. Strategic use of large windows and glass-railed balconies to maximize natural light and view that emphasizes open concept façade.',
     },
     project6: {
       id: 6,
-      title: 'Contemporary - Modern Villa ',
+      title: 'Contemporary - Modern Villa - Elegance in Simplicity',
       category: 'Residential',
       location: '10th of Ramadan City',
       year: '2023',
       description:
-    'This project is characterized by clean lines, geometric forms and minimalist detailing. Features a light, neutral color palette contrasted with stone cladding to maintain a clean, uncluttered aesthetic look. Strategic use of large windows and glass-railed balconies to maximize natural light and view that emphasizes open concept façade.'
+        'This project is characterized by clean lines, geometric forms and minimalist detailing. Features a light, neutral color palette contrasted with stone cladding to maintain a clean, uncluttered aesthetic look. Strategic use of large windows and glass-railed balconies to maximize natural light and view that emphasizes open concept façade.',
     },
 
   },

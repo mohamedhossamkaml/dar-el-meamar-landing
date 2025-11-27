@@ -30,12 +30,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
                 setCategory={setCategory}
                 t={t}
                 setCurrentIndex={setCurrentIndex}
-                availableCategories={Object.keys(project.images) as ('exterior' | 'entrance' | 'sales')[]}
               />
-              <CloseButton
-                onClose={onClose}
-                label={t.galleryPage.modal.closeButton || 'Close'}
-                className="absolute top-2 right-2"
+              <CategoryButtons
+                category={category}
+                setCategory={setCategory}
+                t={t}
+                setCurrentIndex={setCurrentIndex}
+                availableCategories={Object.keys(project.images) as ('exterior' | 'entrance' | 'sales')[]}
               />
             </div>
 

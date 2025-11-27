@@ -25,13 +25,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, t }) => {
           <motion.div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full p-6 relative flex flex-col">
             {/* Header */}
             <div className="mb-2 flex items-center justify-between gap-2">
-              <CategoryButtons
-                category={category}
-                setCategory={setCategory}
-                t={t}
-                setCurrentIndex={setCurrentIndex}
-                availableCategories={Object.keys(project.images) as ('exterior' | 'entrance' | 'sales')[]}
-              />
+
               <CloseButton
                 onClose={onClose}
                 label={t.galleryPage.modal.closeButton || 'Close'}
