@@ -7,19 +7,16 @@ export const aboutPage = {
     title: 'Our Story',
     paragraphs: {
       p1:
-        "Dar Al-Maamar was formed in 2010, our success is born from the dedication and experience of our talented team who work closely with clients from the concept to completion of projects, delivering an exemplary service on time and within budget.",
       p2:
-      '" WE ARE SHARPENING OUR STRATEGY TO BE ONE OF THE MOST VALUABLE, MOST INNOVATIVE AND MOST ADMIRED COMPANIES"',
+        "Over the past 19 years, we've completed more than 500 projects ranging from residential complexes to commercial towers and industrial facilities. Each project reflects our dedication to excellence and our ability to bring architectural visions to life.",
       p3:
-        "Dar Al-Maamar Real Estate Development Company has dedicated all its efforts to finding new architectural ideas and creating a distinct and unique reality that aligns with its clients' ongoing aspirations, featuring distinctive architectural facades, luxurious entrances, and high-quality designs.",
+        'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
       p4:
-        "Understanding its clients' needs and thinking creatively to find prime locations and innovative architectural solutions that utilize all spaces practically and intelligently to suit their requirements.",
+        'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
       p5:
-        "Dar Al-Maamar Real Estate Development Company also strives to maintain the highest and most stringent quality standards by using the finest materials.",
+        'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
       p6:
-        "Therefore, we apply quality in a comprehensive sense, starting with the careful selection of engineers, consultants, and craftsmen to achieve the required delivery specifications and always choosing materials with the longest lifespan and the most beautiful appearance.",
-      p7:
-      "Dar Al-Maamar Real Estate Development Company prioritizes customer comfort and after-sales services. It believes that its clients are the strategic driving force from which the company derives its true size and continuous development. Therefore, we always think about and are happy to serve our valued clients."
+        'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
     },
   },
   coreValues: {

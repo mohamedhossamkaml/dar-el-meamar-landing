@@ -17,9 +17,7 @@ export const aboutPage = {
       p5:
         "Dar Al-Maamar Real Estate Development Company also strives to maintain the highest and most stringent quality standards by using the finest materials.",
       p6:
-        "Therefore, we apply quality in a comprehensive sense, starting with the careful selection of engineers, consultants, and craftsmen to achieve the required delivery specifications and always choosing materials with the longest lifespan and the most beautiful appearance.",
-      p7:
-      "Dar Al-Maamar Real Estate Development Company prioritizes customer comfort and after-sales services. It believes that its clients are the strategic driving force from which the company derives its true size and continuous development. Therefore, we always think about and are happy to serve our valued clients."
+      ""
     },
   },
   coreValues: {

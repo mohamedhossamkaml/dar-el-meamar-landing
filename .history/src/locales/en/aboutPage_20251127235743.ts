@@ -15,11 +15,9 @@ export const aboutPage = {
       p4:
         "Understanding its clients' needs and thinking creatively to find prime locations and innovative architectural solutions that utilize all spaces practically and intelligently to suit their requirements.",
       p5:
-        "Dar Al-Maamar Real Estate Development Company also strives to maintain the highest and most stringent quality standards by using the finest materials.",
+        'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
       p6:
-        "Therefore, we apply quality in a comprehensive sense, starting with the careful selection of engineers, consultants, and craftsmen to achieve the required delivery specifications and always choosing materials with the longest lifespan and the most beautiful appearance.",
-      p7:
-      "Dar Al-Maamar Real Estate Development Company prioritizes customer comfort and after-sales services. It believes that its clients are the strategic driving force from which the company derives its true size and continuous development. Therefore, we always think about and are happy to serve our valued clients."
+        'Today, we stand as industry leaders, combining traditional craftsmanship with cutting-edge technology to deliver projects that exceed expectations and stand the test of time.',
     },
   },
   coreValues: {
